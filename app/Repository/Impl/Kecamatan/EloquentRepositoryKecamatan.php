@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @project pip-rest.
+ * @since 8/23/2016 6:02 PM
+ * @author <a href = "fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
+ */
+
+namespace App\Repository\Impl\Kecamatan;
+
+use App\Models\ModelKecamatan;
+use App\Repository\Impl\ABaseRepository;
+use App\Repository\Impl\SecurityUser\UserRepository;
+
+class EloquentRepositoryKecamatan extends ABaseRepository implements KecamatanRepository
+{
+
+    /**
+     * EloquentRepositoryKecamatan constructor.
+     */
+    public function __construct(UserRepository $p_UserRepository)
+    {
+        parent::__construct($p_UserRepository);
+    }
+
+    public function getModel(){
+        return new ModelKecamatan();
+    }
+
+}
