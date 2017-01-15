@@ -11,10 +11,6 @@ namespace App\ConstantValue;
 
 interface IModelVillageConstant
 {
-    const VILLAGE_MODEL_NAME                       = "village";
-    const VILLAGE_MODEL_TABLE_NAME                 = "mda_village";
-    const VILLAGE_MODEL_COL_ID                     = "id";
-    const VILLAGE_MODEL_COL_CODE                   = "code";
-    const VILLAGE_MODEL_COL_NAME                   = "name";
-    const VILLAGE_MODEL_COL_ID_DISTRICT            = "mda_district_id";
+    const VILLAGE_MODEL_NAME                       = "mst_village";
+    const VILLAGE_COL_DISTRICT_ID                  = "district_id";
 }

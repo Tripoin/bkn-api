@@ -11,6 +11,5 @@ namespace App\ConstantValue;
 
 interface IProvinceConstant
 {
-    const MODEL_PROVINCE_NAME                      = "province";
-    const MODEL_PROVINCE_TABLE_NAME                = "mda_province";
+    const MODEL_PROVINCE_NAME                      = "mst_province";
 }

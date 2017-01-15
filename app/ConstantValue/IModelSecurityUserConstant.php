@@ -11,8 +11,8 @@ namespace App\ConstantValue;
 interface IModelSecurityUserConstant extends IAuditTrailConstant
 {
     const MODEL_SECURITY_USER_NAME                              = "User";
-    const MODEL_SECURITY_USER_TABLE_NAME                        = "security_user";
-    const MODEL_SECURITY_USER_COL_USER_CODE                     = "user_code";
+    const MODEL_SECURITY_USER_TABLE_NAME                        = "sec_user";
+    const MODEL_SECURITY_USER_COL_USER_CODE                     = "code";
     const MODEL_SECURITY_USER_COL_USER_PASSWORD                 = "password";
     const MODEL_SECURITY_USER_COL_USER_EXPIRED_DATE             = "expired_date";
     const MODEL_SECURITY_USER_COL_USER_LOGIN_STATUS             = "login_status";

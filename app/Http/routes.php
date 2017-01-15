@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return "RESTful API for PIP v1";
+    return "RESTful API for BKN v1";
 });
 
 Route::auth();
@@ -49,25 +49,6 @@ Route::group(['prefix' => '000000/1/'], function ()
          */
         Route::group(['prefix' => '130000'], function ()
         {
-            Route::group(['prefix' => '130001'], function ()
-            {
-                Route::get('command=100003', 'BenefitRestController@all');
-                Route::post('command=100004', 'BenefitRestController@insert');
-                Route::put('command=100005', 'BenefitRestController@update');
-                Route::delete('command=100006', 'BenefitRestController@delete');
-                Route::post('command=100007', 'BenefitRestController@findById');
-                Route::post('command=100008', 'BenefitRestController@findByCode');
-                Route::post('command=100009', 'BenefitRestController@findByName');
-                Route::post('command=100010', 'BenefitRestController@advancedPagination');
-                Route::post('command=100011', 'BenefitRestController@simplePagination');
-                Route::get('command=100012', 'BenefitRestController@selectLOV');
-                Route::delete('command=100015', 'BenefitRestController@deleteCollection');
-                Route::get('command=100016', 'BenefitRestController@getPhysicalColumnNames');
-                Route::get('command=100017', 'BenefitRestController@getSimpleReportData');
-                Route::get('command=100017', 'BenefitRestController@getSimpleReportData');
-                Route::post('command=100018', 'BenefitRestController@hardCorePagination');
-            });
-
             Route::group(['prefix' => '130010'], function ()
             {
                 Route::get('command=100003', 'ProvinceRestController@all');
@@ -162,6 +143,7 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::post('command=100010', 'BenefitTypeRestController@advancedPagination');
                 Route::post('command=100011', 'BenefitTypeRestController@simplePagination');
                 Route::get('command=100012', 'BenefitTypeRestController@selectLOV');
+                Route::get('command=100013', 'BudgetTypeRestController@all');
             });
 
         });

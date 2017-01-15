@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 use App\ConstantValue\IApplicationConstant;
 use App\Repository\Impl\SecurityUser\UserRepository;
 use App\Util\PIPCrypt;
+use Illuminate\Support\Facades\Log;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Illuminate\Http\Request;
 use Tymon\JWTAuth\Facades\JWTAuth;
@@ -36,17 +37,14 @@ class AuthRestController extends Controller
     public function login(Request $request) {
         $auth = $request->header(IApplicationConstant::AUTHORIZATION);
         $pipCrypt = new PIPCrypt();
-
         try{
             $decrypted = $pipCrypt->decrypt($auth);
             $explodedDecrypt = explode(IApplicationConstant::COLON, $decrypted);
             $this->userCode = $explodedDecrypt[0];
-
             $credentials = [
                 IApplicationConstant::USER_CODE=>$explodedDecrypt[0],
                 IApplicationConstant::PASSWORD=>$explodedDecrypt[1]
             ];
-
             $this->repositoryUser->doLogin($this->userCode);
         }catch (\Exception $e){
             return response()->json(

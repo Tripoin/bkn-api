@@ -1,20 +1,20 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Dayat
- * Date: 06/09/2016
- * Time: 18:10
+ * @project bkn-api.
+ * @since 1/15/2017 6:43 PM
+ * @author <a href = "fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
-namespace App\Models;
+namespace app\Models;
 
 
 use App\ConstantValue\IApplicationConstant;
 use Illuminate\Database\Eloquent\Model;
 
-class ModelDistrict extends ModelAuditTrails
+class ModelAuditTrails extends Model
 {
-    protected $table =  IApplicationConstant::DISTRICT_MODEL_NAME;
+
+    public $timestamps = false;
 
     protected $fillable = array
     (
@@ -26,7 +26,6 @@ class ModelDistrict extends ModelAuditTrails
         IApplicationConstant::CREATED_BY,
         IApplicationConstant::CREATED_ON,
         IApplicationConstant::MODIFIED_BY,
-        IApplicationConstant::MODIFIED_ON,
-        IApplicationConstant::DISTRICT_MODEL_COL_ID_CITY
+        IApplicationConstant::MODIFIED_ON
     );
 }

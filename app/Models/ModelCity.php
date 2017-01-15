@@ -12,17 +12,21 @@ namespace App\Models;
 use App\ConstantValue\IApplicationConstant;
 use Illuminate\Database\Eloquent\Model;
 
-class ModelCity extends Model
+class ModelCity extends ModelAuditTrails
 {
     protected $table = IApplicationConstant::CITY_TABLE_NAME;
 
-    public $timestamps = false;
-
     protected $fillable = array
     (
-        IApplicationConstant::CITY_COL_ID,
-        IApplicationConstant::CITY_COL_CODE,
-        IApplicationConstant::CITY_COL_NAME,
-        IApplicationConstant::CITY_COL_ID_PROVINCE
+        IApplicationConstant::ID,
+        IApplicationConstant::CODE,
+        IApplicationConstant::NAME,
+        IApplicationConstant::DESCRIPTION,
+        IApplicationConstant::STATUS,
+        IApplicationConstant::CREATED_BY,
+        IApplicationConstant::CREATED_ON,
+        IApplicationConstant::MODIFIED_BY,
+        IApplicationConstant::MODIFIED_ON,
+        IApplicationConstant::CITY_COL_PROVINCE_ID
     );
 }

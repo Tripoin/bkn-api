@@ -20,7 +20,7 @@ interface IJSONConstant
     const DESCENDING        = 'descending';
     const GROUP_PARAM_CODE  = 'group_param_code';
     const APP_PARAM_CODE    = 'app_param_code';
-    const USER_CODE         = 'user_code';
+    const USER_CODE         = 'code';
     const ITEM              = 'item';
     const LINK              = 'link';
     const ORDER             = 'order';

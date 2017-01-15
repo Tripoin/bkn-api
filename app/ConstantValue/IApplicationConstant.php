@@ -15,18 +15,12 @@ interface IApplicationConstant extends
     IHTTPHeaderConstant,
     IAuditTrailConstant,
     IJSONConstant,
+    IModelActionParameterConstant,
+    IModelBudgetTypeConstant,
     IHTTPResponse,
-    IModelBenefitConstant,
-    IModelKecamatanConstant,
-    IModelProvinsiConstant,
     IModelCityConstant,
     IModelDistrictConstant,
     IModelVillageConstant,
-    IModelJobConstant,
-    IModelEducationConstant,
-    IModelBenefitTypeConstant,
-    IModelBenefitProviderConstant,
-    IModelProviderDeviceConstant,
     IProvinceConstant,
     IModelSecurityBranchConstant,
     IModelSecurityFunctionConstant,
@@ -39,7 +33,5 @@ interface IApplicationConstant extends
     IModelSecurityUserConstant,
     IViewConstant,
     IValidationConstant {
-
- const APPLICATION_CRYPT = "PIP-Dev!23TelkomS1gma";
-
+    const APPLICATION_CRYPT = "PIP-Dev!23TelkomS1gma";
 }

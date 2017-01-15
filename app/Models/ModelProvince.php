@@ -12,17 +12,10 @@ namespace App\Models;
 use App\ConstantValue\IApplicationConstant;
 use Illuminate\Database\Eloquent\Model;
 
-class ModelProvince extends Model
+class ModelProvince extends ModelAuditTrails
 {
 
-    protected $table = IApplicationConstant::MODEL_PROVINCE_TABLE_NAME;
+    protected $table = IApplicationConstant::MODEL_PROVINCE_NAME;
 
-    public $timestamps = false;
-
-    protected $fillable = array(
-        IApplicationConstant::ID,
-        IApplicationConstant::CODE,
-        IApplicationConstant::NAME
-    );
 
 }

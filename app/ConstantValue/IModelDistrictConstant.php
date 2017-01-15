@@ -11,10 +11,6 @@ namespace App\ConstantValue;
 
 interface IModelDistrictConstant
 {
-    const DISTRICT_MODEL_NAME                       = "district";
-    const DISTRICT_MODEL_TABLE_NAME                 = "mda_district";
-    const DISTRICT_MODEL_COL_ID                     = "id";
-    const DISTRICT_MODEL_COL_CODE                   = "code";
-    const DISTRICT_MODEL_COL_NAME                   = "name";
-    const DISTRICT_MODEL_COL_ID_CITY                = "mda_city_id";
+    const DISTRICT_MODEL_NAME                       = "mst_district";
+    const DISTRICT_MODEL_COL_ID_CITY                = "city_id";
 }

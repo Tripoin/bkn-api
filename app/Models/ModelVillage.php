@@ -12,17 +12,21 @@ namespace App\Models;
 use App\ConstantValue\IApplicationConstant;
 use Illuminate\Database\Eloquent\Model;
 
-class ModelVillage extends Model
+class ModelVillage extends ModelAuditTrails
 {
-    protected $table = IApplicationConstant::VILLAGE_MODEL_TABLE_NAME;
-
-    public $timestamps = false;
+    protected $table = IApplicationConstant::VILLAGE_MODEL_NAME;
 
     protected $fillable = array
     (
-        IApplicationConstant::VILLAGE_MODEL_COL_ID,
-        IApplicationConstant::VILLAGE_MODEL_COL_CODE,
-        IApplicationConstant::VILLAGE_MODEL_COL_NAME,
-        IApplicationConstant::VILLAGE_MODEL_COL_ID_DISTRICT
+        IApplicationConstant::ID,
+        IApplicationConstant::CODE,
+        IApplicationConstant::NAME,
+        IApplicationConstant::DESCRIPTION,
+        IApplicationConstant::STATUS,
+        IApplicationConstant::CREATED_BY,
+        IApplicationConstant::CREATED_ON,
+        IApplicationConstant::MODIFIED_BY,
+        IApplicationConstant::MODIFIED_ON,
+        IApplicationConstant::VILLAGE_COL_DISTRICT_ID
     );
 }

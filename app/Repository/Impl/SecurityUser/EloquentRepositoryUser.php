@@ -52,7 +52,6 @@ class EloquentRepositoryUser extends ABaseRepository implements UserRepository
             IApplicationConstant::LIKE,
             IApplicationConstant::PERCENTAGE . $p_UserCode . IApplicationConstant::PERCENTAGE
         )->update([IApplicationConstant::MODEL_SECURITY_USER_COL_USER_LOGIN_STATUS => IApplicationConstant::ACTIVE]);
-
     }
 
     public function doLogout($p_UserCode)

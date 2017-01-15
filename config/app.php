@@ -159,7 +159,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        App\Service\PIPRepositoryServiceProvider::class,
+        App\Service\TripoinRepositoryServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class
 
     ],

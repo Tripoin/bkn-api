@@ -22,7 +22,7 @@ class ModelSecurityUser extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'user_code', 'user_password',
+        'code', 'password',
     ];
 
     /**
