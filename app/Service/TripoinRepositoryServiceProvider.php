@@ -8,39 +8,24 @@
 
 namespace App\Service;
 
-
-use App\Repository\Impl\Benefit\BenefitProvider\BenefitProviderRepository;
-use App\Repository\Impl\Benefit\BenefitProvider\BenefitProviderStRepository;
-use App\Repository\Impl\Benefit\BenefitProvider\EloquentRepositoryBenefitProvider;
-use App\Repository\Impl\Benefit\BenefitProvider\EloquentRepositoryBenefitProviderSt;
-use App\Repository\Impl\Benefit\BenefitRepository;
-use App\Repository\Impl\Benefit\BenefitType\BenefitTypeRepository;
-use App\Repository\Impl\Benefit\BenefitType\EloquentRepositoryBenefitType;
-use App\Repository\Impl\Benefit\CancelBenefit\CancelBenefitRepository;
-use App\Repository\Impl\Benefit\CancelBenefit\EloquentRepositoryCancelBenefit;
-use App\Repository\Impl\Benefit\EloquentRepositoryBenefit;
+use App\Repository\Impl\Address\AddressRepository;
 use app\Repository\Impl\BudgetType\BudgetTypeRepository;
 use app\Repository\Impl\BudgetType\EloquentRepositoryBudgetType;
+use app\Repository\Impl\Certificate\CertificateRepository;
+use app\Repository\Impl\Certificate\EloquentRepositoryCertificate;
+use App\Repository\Impl\City\EloquentRepositoryAddress;
 use App\Repository\Impl\City\EloquentRepositoryCity;
 use App\Repository\Impl\City\CityRepository;
 use App\Repository\Impl\District\DistrictRepository;
 use App\Repository\Impl\District\EloquentRepositoryDistrict;
-use App\Repository\Impl\Education\EducationRepository;
-use App\Repository\Impl\Education\EloquentRepositoryEducation;
-use App\Repository\Impl\Job\EloquentRepositoryJob;
-use App\Repository\Impl\Job\JobRepository;
-use App\Repository\Impl\Kecamatan\EloquentRepositoryKecamatan;
-use App\Repository\Impl\Kecamatan\KecamatanRepository;
 
 use App\Repository\Impl\MenuGenerator\EloquentRepositoryMenuGenerator;
 use App\Repository\Impl\MenuGenerator\MenuGeneratorRepository;
-use App\Repository\Impl\ProviderDevice\EloquentRepositoryProviderDevice;
-use App\Repository\Impl\ProviderDevice\EloquentRepositoryProviderDeviceSt;
-use App\Repository\Impl\ProviderDevice\ProviderDeviceRepository;
-use App\Repository\Impl\ProviderDevice\ProviderDeviceStRepository;
 use App\Repository\Impl\Province\EloquentRepositoryProvince;
 use App\Repository\Impl\Province\ProvinceRepository;
 
+use app\Repository\Impl\Room\EloquentRepositoryRoom;
+use app\Repository\Impl\Room\RoomRepository;
 use App\Repository\Impl\SecurityBranch\EloquentRepositorySecurityBranch;
 use App\Repository\Impl\SecurityBranch\SecurityBranchRepository;
 use App\Repository\Impl\SecurityFunction\EloquentRepositorySecurityFunction;
@@ -69,17 +54,15 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
     public function register()
     {
         /*MDA*/
-        $this->app->bind(KecamatanRepository::class, EloquentRepositoryKecamatan::class);
         $this->app->bind(ProvinceRepository::class, EloquentRepositoryProvince::class);
         $this->app->bind(CityRepository::class, EloquentRepositoryCity::class);
         $this->app->bind(DistrictRepository::class, EloquentRepositoryDistrict::class);
         $this->app->bind(VillageRepository::class, EloquentRepositoryVillage::class);
-        $this->app->bind(JobRepository::class, EloquentRepositoryJob::class);
-        $this->app->bind(EducationRepository::class, EloquentRepositoryEducation::class);
-        $this->app->bind(BenefitTypeRepository::class, EloquentRepositoryBenefitType::class);
-		$this->app->bind(BenefitRepository::class, EloquentRepositoryBenefit::class);
 		$this->app->bind(ProvinceRepository::class, EloquentRepositoryProvince::class);
         $this->app->bind(BudgetTypeRepository::class, EloquentRepositoryBudgetType::class);
+        $this->app->bind(CertificateRepository::class, EloquentRepositoryCertificate::class);
+        $this->app->bind(RoomRepository::class, EloquentRepositoryRoom::class);
+        $this->app->bind(AddressRepository::class, EloquentRepositoryAddress::class);
 
         /*SECURITY*/
         $this->app->bind(UserRepository::class, EloquentRepositoryUser::class);
@@ -92,11 +75,6 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
         $this->app->bind(MenuGeneratorRepository::class, EloquentRepositoryMenuGenerator::class);
 
         /*TRANSACTION*/
-        $this->app->bind(BenefitProviderRepository::class, EloquentRepositoryBenefitProvider::class);
-        $this->app->bind(BenefitProviderStRepository::class, EloquentRepositoryBenefitProviderSt::class);
-        $this->app->bind(ProviderDeviceRepository::class, EloquentRepositoryProviderDevice::class);
-        $this->app->bind(ProviderDeviceStRepository::class, EloquentRepositoryProviderDeviceSt::class);
-        $this->app->bind(CancelBenefitRepository::class, EloquentRepositoryCancelBenefit::class);
 
     }
 }

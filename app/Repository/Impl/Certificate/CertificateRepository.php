@@ -5,12 +5,12 @@
  * @author <a href ="mailto:fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
-namespace app\Repository\Impl\BudgetType;
+namespace app\Repository\Impl\Certificate;
 
 
 use App\Repository\IGenericRepository;
 
-interface BudgetTypeRepository extends IGenericRepository
+interface CertificateRepository extends IGenericRepository
 {
 
 }

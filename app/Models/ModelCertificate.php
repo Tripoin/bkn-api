@@ -1,19 +1,18 @@
 <?php
 /**
- * @project pip-rest.
- * @since 8/23/2016 4:06 PM
- * @author <a href = "fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
+ * @package app/Models
+ * @since 30/12/2015 - 8:00 PM
+ * @author <a href ="mailto:fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
 namespace App\Models;
 
 
 use App\ConstantValue\IApplicationConstant;
-use Illuminate\Database\Eloquent\Model;
 
-class ModelDistrict extends ModelAuditTrails
+class ModelCertificate extends ModelAuditTrails
 {
-    protected $table =  IApplicationConstant::DISTRICT_MODEL_NAME;
+    protected $table = IApplicationConstant::CERTIFICATE_TABLE_NAME;
 
     protected $fillable = array
     (
@@ -26,6 +25,8 @@ class ModelDistrict extends ModelAuditTrails
         IApplicationConstant::CREATED_ON,
         IApplicationConstant::MODIFIED_BY,
         IApplicationConstant::MODIFIED_ON,
-        IApplicationConstant::DISTRICT_MODEL_COL_ID_CITY
+        IApplicationConstant::CERTIFICATE_COL_EXPIRED,
+        IApplicationConstant::CERTIFICATE_COL_SIGNATURE_1,
+        IApplicationConstant::CERTIFICATE_COL_SIGNATURE_2,
     );
 }

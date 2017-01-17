@@ -20,7 +20,7 @@ class CityRestController extends ARestController
 
 
     /**
-     * CityRestController constructor.
+     * @param CityRepository $cityRepository
      */
     public function __construct(CityRepository $cityRepository)
     {

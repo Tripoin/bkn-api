@@ -5,12 +5,12 @@
  * @author <a href ="mailto:fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
-namespace app\Repository\Impl\BudgetType;
+namespace App\Repository\Impl\Address;
 
 
 use App\Repository\IGenericRepository;
 
-interface BudgetTypeRepository extends IGenericRepository
+interface AddressRepository extends IGenericRepository
 {
 
 }

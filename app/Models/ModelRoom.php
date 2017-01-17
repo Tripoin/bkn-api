@@ -10,8 +10,8 @@ namespace App\Models;
 
 use App\ConstantValue\IApplicationConstant;
 
-class ModelBudgetType extends ModelAuditTrails
+class ModelRoom extends ModelAuditTrails
 {
-    protected $table = IApplicationConstant::BUDGET_TYPE_TABLE_NAME_TABLE_NAME;
+    protected $table = IApplicationConstant::ROOM_TABLE_NAME;
 
 }

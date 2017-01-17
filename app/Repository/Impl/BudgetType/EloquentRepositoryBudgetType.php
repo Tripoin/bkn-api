@@ -1,9 +1,8 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: User
- * Date: 1/13/2017
- * Time: 11:50 PM
+ * @project bkn-api
+ * @since 30/12/2015 - 8:00 PM
+ * @author <a href ="mailto:fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
 namespace app\Repository\Impl\BudgetType;

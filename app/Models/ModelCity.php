@@ -1,9 +1,8 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Dayat
- * Date: 06/09/2016
- * Time: 11:08
+ * @project pip-rest.
+ * @since 8/23/2016 4:06 PM
+ * @author <a href = "fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
 namespace App\Models;
