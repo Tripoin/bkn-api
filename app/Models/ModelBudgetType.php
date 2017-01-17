@@ -10,9 +10,8 @@ namespace app\Models;
 
 
 use App\ConstantValue\IApplicationConstant;
-use Illuminate\Database\Eloquent\Model;
 
-class ModelBudgetType extends Model
+class ModelBudgetType extends ModelAuditTrails
 {
     protected $table = IApplicationConstant::BUDGET_TYPE_TABLE_NAME;
 

@@ -14,8 +14,8 @@ interface IModelPassedActivityConstant
     /**
      * mst_passed_activity
      */
-    const MST_PASSED_ACTIVITY           = 'mst_passed_activity';
-    const PASSED_ACT_PARTICIPANT_ASSIGN = 'participant_assignment_id';
+    const MST_PASSED_ACTIVITY                      = 'mst_passed_activity';
+    const PASSED_ACT_PARTICIPANT_ASSIGN            = 'participant_assignment_id';
     const PASSED_ACT_SUBJECT_NAME                  = 'subject_name';
     const PASSED_ACT_SUBJECT_CATEGORY_NAME         = 'subject_category_name';
     const PASSED_ACT_SUBJECT_TYPE_NAME             = 'subject_type_name';

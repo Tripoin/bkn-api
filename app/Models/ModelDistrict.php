@@ -10,7 +10,6 @@ namespace App\Models;
 
 
 use App\ConstantValue\IApplicationConstant;
-use Illuminate\Database\Eloquent\Model;
 
 class ModelDistrict extends ModelAuditTrails
 {
@@ -18,15 +17,6 @@ class ModelDistrict extends ModelAuditTrails
 
     protected $fillable = array
     (
-        IApplicationConstant::ID,
-        IApplicationConstant::CODE,
-        IApplicationConstant::NAME,
-        IApplicationConstant::DESCRIPTION,
-        IApplicationConstant::STATUS,
-        IApplicationConstant::CREATED_BY,
-        IApplicationConstant::CREATED_ON,
-        IApplicationConstant::MODIFIED_BY,
-        IApplicationConstant::MODIFIED_ON,
         IApplicationConstant::DISTRICT_MODEL_COL_ID_CITY
     );
 }
