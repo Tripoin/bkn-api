@@ -10,10 +10,10 @@ namespace App\Service;
 
 use App\Repository\Impl\Address\AddressRepository;
 use App\Repository\Impl\Address\EloquentRepositoryAddress;
-use app\Repository\Impl\BudgetType\BudgetTypeRepository;
-use app\Repository\Impl\BudgetType\EloquentRepositoryBudgetType;
-use app\Repository\Impl\Certificate\CertificateRepository;
-use app\Repository\Impl\Certificate\EloquentRepositoryCertificate;
+use App\Repository\Impl\BudgetType\BudgetTypeRepository;
+use App\Repository\Impl\BudgetType\EloquentRepositoryBudgetType;
+use App\Repository\Impl\Certificate\CertificateRepository;
+use App\Repository\Impl\Certificate\EloquentRepositoryCertificate;
 use App\Repository\Impl\City\EloquentRepositoryCity;
 use App\Repository\Impl\City\CityRepository;
 use App\Repository\Impl\District\DistrictRepository;
@@ -21,7 +21,9 @@ use App\Repository\Impl\District\EloquentRepositoryDistrict;
 
 use App\Repository\Impl\LevelAkd\EloquentRepositoryLevelAkd;
 use App\Repository\Impl\LevelAkd\LevelAkdRepository;
+use App\Repository\Impl\MaterialSubject\EloquentMaterialSubjectRepository;
 use App\Repository\Impl\MenuGenerator\EloquentRepositoryMenuGenerator;
+use App\Repository\Impl\MaterialSubject\MaterialSubjectRepository;
 use App\Repository\Impl\MenuGenerator\MenuGeneratorRepository;
 use App\Repository\Impl\Province\EloquentRepositoryProvince;
 use App\Repository\Impl\Province\ProvinceRepository;
@@ -35,8 +37,8 @@ use App\Repository\Impl\Question\QuestionType\QuestionTypeRepository;
 use App\Repository\Impl\Questionnaire\EloquentRepositoryQuestionnaire;
 use App\Repository\Impl\Questionnaire\QuestionnaireRepository;
 
-use app\Repository\Impl\Room\EloquentRepositoryRoom;
-use app\Repository\Impl\Room\RoomRepository;
+use App\Repository\Impl\Room\EloquentRepositoryRoom;
+use App\Repository\Impl\Room\RoomRepository;
 
 use App\Repository\Impl\SecurityBranch\EloquentRepositorySecurityBranch;
 use App\Repository\Impl\SecurityBranch\SecurityBranchRepository;
@@ -92,6 +94,7 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
         $this->app->bind(SecurityBranchRepository::class, EloquentRepositorySecurityBranch::class);
         $this->app->bind(SecurityUserProfileRepository::class, EloquentRepositorySecurityUserProfile::class);
         $this->app->bind(MenuGeneratorRepository::class, EloquentRepositoryMenuGenerator::class);
+        $this->app->bind(MaterialSubjectRepository::class, EloquentMaterialSubjectRepository::class);
 
         /*TRANSACTION*/
 

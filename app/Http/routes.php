@@ -261,6 +261,38 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::post('command=100011', 'SubjectTypeRestController@simplePagination');
                 Route::get('command=100012', 'SubjectTypeRestController@selectLOV');
             });
+            /**
+             * BudgetType
+             */
+            Route::group(['prefix' => '130004'], function ()
+            {
+                Route::get('command=100003', 'BudgetTypeRestController@all');
+                Route::post('command=100004', 'BudgetTypeRestController@insert');
+                Route::put('command=100005', 'BudgetTypeRestController@update');
+                Route::delete('command=100006', 'BudgetTypeRestController@delete');
+                Route::post('command=100007', 'BudgetTypeRestController@findById');
+                Route::post('command=100008', 'BudgetTypeRestController@findByCode');
+                Route::post('command=100009', 'BudgetTypeRestController@findByName');
+                Route::post('command=100010', 'BudgetTypeRestController@advancedPagination');
+                Route::post('command=100011', 'BudgetTypeRestController@simplePagination');
+                Route::get('command=100012', 'BudgetTypeRestController@selectLOV');
+            });
+            /**
+             * MaterialSubject
+             */
+            Route::group(['prefix' => '130008'], function ()
+            {
+                Route::get('command=100003', 'MaterialSubjectRestController@all');
+                Route::post('command=100004', 'MaterialSubjectRestController@insert');
+                Route::put('command=100005', 'MaterialSubjectRestController@update');
+                Route::delete('command=100006', 'MaterialSubjectRestController@delete');
+                Route::post('command=100007', 'MaterialSubjectRestController@findById');
+                Route::post('command=100008', 'MaterialSubjectRestController@findByCode');
+                Route::post('command=100009', 'MaterialSubjectRestController@findByName');
+                Route::post('command=100010', 'MaterialSubjectRestController@advancedPagination');
+                Route::post('command=100011', 'MaterialSubjectRestController@simplePagination');
+                Route::get('command=100012', 'MaterialSubjectRestController@selectLOV');
+            });
 
         });
 
@@ -333,6 +365,8 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::post('command=100011', 'SecurityUserRestController@simplePagination');
                 Route::get('command=100012', 'SecurityUserRestController@selectLOV');
             });
+
+
             Route::group(['prefix' => '190006'], function ()
             {
                 Route::get('command=100003', 'SecurityUserProfileRestController@all');
