@@ -149,6 +149,38 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::get('command=100013', 'CertificateRestController@all');
             });
             /**
+             * question category
+             */
+            Route::group(['prefix' => '130025'], function ()
+            {
+                Route::get('command=100003', 'QuestionCategoryRestController@all');
+                Route::post('command=100004', 'QuestionCategoryRestController@insert');
+                Route::put('command=100005', 'QuestionCategoryRestController@update');
+                Route::delete('command=100006', 'QuestionCategoryRestController@delete');
+                Route::post('command=100007', 'QuestionCategoryRestController@findById');
+                Route::post('command=100008', 'QuestionCategoryRestController@findByCode');
+                Route::post('command=100009', 'QuestionCategoryRestController@findByName');
+                Route::post('command=100010', 'QuestionCategoryRestController@advancedPagination');
+                Route::post('command=100011', 'QuestionCategoryRestController@simplePagination');
+                Route::get('command=100012', 'QuestionCategoryRestController@selectLOV');
+            });
+            /**
+             * question type
+             */
+            Route::group(['prefix' => '130048'], function ()
+            {
+                Route::get('command=100003', 'QuestionTypeRestController@all');
+                Route::post('command=100004', 'QuestionTypeRestController@insert');
+                Route::put('command=100005', 'QuestionTypeRestController@update');
+                Route::delete('command=100006', 'QuestionTypeRestController@delete');
+                Route::post('command=100007', 'QuestionTypeRestController@findById');
+                Route::post('command=100008', 'QuestionTypeRestController@findByCode');
+                Route::post('command=100009', 'QuestionTypeRestController@findByName');
+                Route::post('command=100010', 'QuestionTypeRestController@advancedPagination');
+                Route::post('command=100011', 'QuestionTypeRestController@simplePagination');
+                Route::get('command=100012', 'QuestionTypeRestController@selectLOV');
+            });
+            /**
              * ROOM
              */
             Route::group(['prefix' => '130049'], function ()
@@ -164,6 +196,70 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::post('command=100011', 'RoomRestController@simplePagination');
                 Route::get('command=100012', 'RoomRestController@selectLOV');
                 Route::get('command=100013', 'RoomRestController@all');
+            });
+            /**
+             * question
+             */
+            Route::group(['prefix' => '130031'], function()
+            {
+                Route::get('command=100003', 'QuestionRestController@all');
+                Route::post('command=100004', 'QuestionRestController@insert');
+                Route::put('command=100005', 'QuestionRestController@update');
+                Route::delete('command=100006', 'QuestionRestController@delete');
+                Route::post('command=100007', 'QuestionRestController@findById');
+                Route::post('command=100008', 'QuestionRestController@findByCode');
+                Route::post('command=100009', 'QuestionRestController@findByName');
+                Route::post('command=100010', 'QuestionRestController@advancedPagination');
+                Route::post('command=100011', 'QuestionRestController@simplePagination');
+                Route::get('command=100012', 'QuestionRestController@selectLOV');
+            });
+            /**
+             * questionnaire
+             */
+            Route::group(['prefix' => '130024'], function()
+            {
+                Route::get('command=100003', 'QuestionnaireRestController@all');
+                Route::post('command=100004', 'QuestionnaireRestController@insert');
+                Route::put('command=100005', 'QuestionnaireRestController@update');
+                Route::delete('command=100006', 'QuestionnaireRestController@delete');
+                Route::post('command=100007', 'QuestionnaireRestController@findById');
+                Route::post('command=100008', 'QuestionnaireRestController@findByCode');
+                Route::post('command=100009', 'QuestionnaireRestController@findByName');
+                Route::post('command=100010', 'QuestionnaireRestController@advancedPagination');
+                Route::post('command=100011', 'QuestionnaireRestController@simplePagination');
+                Route::get('command=100012', 'QuestionnaireRestController@selectLOV');
+            });
+            /**
+             * level akd
+             */
+            Route::group(['prefix' => '130023'], function()
+            {
+                Route::get('command=100003', 'LevelAkdRestController@all');
+                Route::post('command=100004', 'LevelAkdRestController@insert');
+                Route::put('command=100005', 'LevelAkdRestController@update');
+                Route::delete('command=100006', 'LevelAkdRestController@delete');
+                Route::post('command=100007', 'LevelAkdRestController@findById');
+                Route::post('command=100008', 'LevelAkdRestController@findByCode');
+                Route::post('command=100009', 'LevelAkdRestController@findByName');
+                Route::post('command=100010', 'LevelAkdRestController@advancedPagination');
+                Route::post('command=100011', 'LevelAkdRestController@simplePagination');
+                Route::get('command=100012', 'LevelAkdRestController@selectLOV');
+            });
+            /**
+             * subject type
+             */
+            Route::group(['prefix' => '130003'], function ()
+            {
+                Route::get('command=100003', 'SubjectTypeRestController@all');
+                Route::post('command=100004', 'SubjectTypeRestController@insert');
+                Route::put('command=100005', 'SubjectTypeRestController@update');
+                Route::delete('command=100006', 'SubjectTypeRestController@delete');
+                Route::post('command=100007', 'SubjectTypeRestController@findById');
+                Route::post('command=100008', 'SubjectTypeRestController@findByCode');
+                Route::post('command=100009', 'SubjectTypeRestController@findByName');
+                Route::post('command=100010', 'SubjectTypeRestController@advancedPagination');
+                Route::post('command=100011', 'SubjectTypeRestController@simplePagination');
+                Route::get('command=100012', 'SubjectTypeRestController@selectLOV');
             });
 
         });

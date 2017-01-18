@@ -19,13 +19,27 @@ use App\Repository\Impl\City\CityRepository;
 use App\Repository\Impl\District\DistrictRepository;
 use App\Repository\Impl\District\EloquentRepositoryDistrict;
 
+use App\Repository\Impl\LevelAkd\EloquentRepositoryLevelAkd;
+use App\Repository\Impl\LevelAkd\LevelAkdRepository;
 use App\Repository\Impl\MenuGenerator\EloquentRepositoryMenuGenerator;
 use App\Repository\Impl\MenuGenerator\MenuGeneratorRepository;
 use App\Repository\Impl\Province\EloquentRepositoryProvince;
 use App\Repository\Impl\Province\ProvinceRepository;
 
+<<<<<<< .mine
+use App\Repository\Impl\Question\EloquentRepositoryQuestion;
+use App\Repository\Impl\Question\QuestionCategory\EloquentRepositoryQuestionCategory;
+use App\Repository\Impl\Question\QuestionCategory\QuestionCategoryRepository;
+use App\Repository\Impl\Question\QuestionRepository;
+use App\Repository\Impl\Question\QuestionType\EloquentRepositoryQuestionType;
+use App\Repository\Impl\Question\QuestionType\QuestionTypeRepository;
+use App\Repository\Impl\Questionnaire\EloquentRepositoryQuestionnaire;
+use App\Repository\Impl\Questionnaire\QuestionnaireRepository;
+||||||| .r4
+=======
 use app\Repository\Impl\Room\EloquentRepositoryRoom;
 use app\Repository\Impl\Room\RoomRepository;
+>>>>>>> .r8
 use App\Repository\Impl\SecurityBranch\EloquentRepositorySecurityBranch;
 use App\Repository\Impl\SecurityBranch\SecurityBranchRepository;
 use App\Repository\Impl\SecurityFunction\EloquentRepositorySecurityFunction;
@@ -39,6 +53,8 @@ use App\Repository\Impl\SecurityGroup\SecurityUserProfileRepository;
 use App\Repository\Impl\SecurityUser\EloquentRepositoryUser;
 use App\Repository\Impl\SecurityUser\UserRepository;
 
+use App\Repository\Impl\Subject\SubjectType\EloquentRepositorySubjectType;
+use App\Repository\Impl\Subject\SubjectType\SubjectTypeRepository;
 use App\Repository\Impl\Village\EloquentRepositoryVillage;
 use App\Repository\Impl\Village\VillageRepository;
 use Illuminate\Support\ServiceProvider;
@@ -54,10 +70,15 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
     public function register()
     {
         /*MDA*/
-        $this->app->bind(ProvinceRepository::class, EloquentRepositoryProvince::class);
         $this->app->bind(CityRepository::class, EloquentRepositoryCity::class);
         $this->app->bind(DistrictRepository::class, EloquentRepositoryDistrict::class);
         $this->app->bind(VillageRepository::class, EloquentRepositoryVillage::class);
+        $this->app->bind(QuestionTypeRepository::class, EloquentRepositoryQuestionType::class);
+        $this->app->bind(QuestionCategoryRepository::class, EloquentRepositoryQuestionCategory::class);
+        $this->app->bind(QuestionRepository::class, EloquentRepositoryQuestion::class);
+        $this->app->bind(QuestionnaireRepository::class, EloquentRepositoryQuestionnaire::class);
+        $this->app->bind(LevelAkdRepository::class, EloquentRepositoryLevelAkd::class);
+        $this->app->bind(SubjectTypeRepository::class, EloquentRepositorySubjectType::class);
 		$this->app->bind(ProvinceRepository::class, EloquentRepositoryProvince::class);
         $this->app->bind(BudgetTypeRepository::class, EloquentRepositoryBudgetType::class);
         $this->app->bind(CertificateRepository::class, EloquentRepositoryCertificate::class);

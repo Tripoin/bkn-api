@@ -8,7 +8,7 @@
 namespace App\ConstantValue;
 
 
-interface IGroupModelConstant extends IBaseModelConstant
+interface IGroupModelConstant
 {
     const GROUP_ENTITY_NAME  = 'Group';
     const GROUP_MODEL_NAME   = 'group';

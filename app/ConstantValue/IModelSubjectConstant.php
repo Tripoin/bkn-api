@@ -23,21 +23,19 @@ interface IModelSubjectConstant
     const START_SUBJECT             = 'start_subject';
     const END_SUBJECT               = 'end_subject';
     const SUBJECT_NECESSARY_DESC    = 'necessary_description';
-    const SUBJECT_CATEGORY_ID       = 'subject_category_id';
+    const SUBJECT_TYPE_ID           = 'subject_type_id';
 
     /**
      * mst_subject_category
      */
     const MST_SUBJECT_CATEGORY_TABLE    = 'mst_subject_category';
-    const SUBJECT_TYPE_ID               = 'subject_type_id';
-    const SUBJECT_CATEGORY_PARENT_ID    = 'subject_category_parent_id';
+    const SUBJECT_TYPE_PARENT_ID    = 'subject_type_parent_id';
+    const SUBJECT_CATEGORY_ID       = 'subject_category_id';
 
     /**
      * mst_subject_requirements
      */
     const MST_SUBJECT_REQUIREMENTS_TABLE    = 'mst_subject_requirements';
-    const SUBJECT_REQ_KEY                   = 'subject_requirements_key';
-    const SUBJET_REQ_VALUE                  = 'subject_requirements_value';
 
     /**
      * mst_subject_type
