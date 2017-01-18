@@ -9,11 +9,11 @@
 namespace App\Service;
 
 use App\Repository\Impl\Address\AddressRepository;
+use App\Repository\Impl\Address\EloquentRepositoryAddress;
 use app\Repository\Impl\BudgetType\BudgetTypeRepository;
 use app\Repository\Impl\BudgetType\EloquentRepositoryBudgetType;
 use app\Repository\Impl\Certificate\CertificateRepository;
 use app\Repository\Impl\Certificate\EloquentRepositoryCertificate;
-use App\Repository\Impl\City\EloquentRepositoryAddress;
 use App\Repository\Impl\City\EloquentRepositoryCity;
 use App\Repository\Impl\City\CityRepository;
 use App\Repository\Impl\District\DistrictRepository;
@@ -26,7 +26,6 @@ use App\Repository\Impl\MenuGenerator\MenuGeneratorRepository;
 use App\Repository\Impl\Province\EloquentRepositoryProvince;
 use App\Repository\Impl\Province\ProvinceRepository;
 
-<<<<<<< .mine
 use App\Repository\Impl\Question\EloquentRepositoryQuestion;
 use App\Repository\Impl\Question\QuestionCategory\EloquentRepositoryQuestionCategory;
 use App\Repository\Impl\Question\QuestionCategory\QuestionCategoryRepository;
@@ -35,11 +34,10 @@ use App\Repository\Impl\Question\QuestionType\EloquentRepositoryQuestionType;
 use App\Repository\Impl\Question\QuestionType\QuestionTypeRepository;
 use App\Repository\Impl\Questionnaire\EloquentRepositoryQuestionnaire;
 use App\Repository\Impl\Questionnaire\QuestionnaireRepository;
-||||||| .r4
-=======
+
 use app\Repository\Impl\Room\EloquentRepositoryRoom;
 use app\Repository\Impl\Room\RoomRepository;
->>>>>>> .r8
+
 use App\Repository\Impl\SecurityBranch\EloquentRepositorySecurityBranch;
 use App\Repository\Impl\SecurityBranch\SecurityBranchRepository;
 use App\Repository\Impl\SecurityFunction\EloquentRepositorySecurityFunction;
