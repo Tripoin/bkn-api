@@ -41,7 +41,6 @@ interface IApplicationConstant extends
     IModelPostConstant,
     IModelQuestionConstant,
     IModelReligionConstant,
-    IModelRoomConstant,
     IModelSubjectConstant,
     IModelSystemChoiceAnswerConstant,
     IModelTrainerConstant,
