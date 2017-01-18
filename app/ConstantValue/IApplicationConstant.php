@@ -23,7 +23,6 @@ interface IApplicationConstant extends
     IModelCertificateConstant,
     IModelDistrictConstant,
     IModelVillageConstant,
-    IModelRoomConstant,
     IProvinceConstant,
     IModelAddressConstant,
     IModelAuthorConstant,
