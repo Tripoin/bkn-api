@@ -6,16 +6,22 @@
  * @author <a href = "fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
-namespace App\Repository\Impl\MenuGenerator;
+namespace App\Repository\Impl\MaterialSubject;
 
-use App\ConstantValue\IApplicationConstant;
-use App\Dto\Response\LoginResponseDTO;
-use App\Repository\Impl\SecurityFunction\SecurityFunctionRepository;
-use App\Repository\Impl\SecurityFunctionAssignment\SecurityFunctionAssignmentRepository;
-use App\Repository\Impl\SecurityUser\UserRepository;
+
+
+use App\Models\ModelMaterialSubject;
+use App\Repository\Impl\MaterialSubject\MaterialSubjectRepository;
 
 class EloquentMaterialSubjectRepository implements MaterialSubjectRepository
 {
+    public function __construct(UserRepository $p_UserRepository)
+    {
+        parent::__construct($p_UserRepository);
+    }
 
-
+    public function  getModel()
+    {
+        return new ModelMaterialSubject();
+    }
 }

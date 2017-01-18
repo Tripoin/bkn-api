@@ -23,7 +23,7 @@ interface IModelTrainerConstant
     const MST_TRAINER_ASSIGNMENT_TABLE      = 'mst_trainer_assignment';
     const TRAINER_ID                        = 'trainer_id';
     const ACTIVITY_DETAILS_ID               = 'activity_details_id';
-    const IS_PASSED                         = 'is_passed';
+    const TRAINER_IS_PASSED                         = 'is_passed';
     const ASSIGN_EXPIRED                    = 'expired';
     const ASSIGN_LETTER_ID                  = 'assignment_letter_id';
 }

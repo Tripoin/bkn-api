@@ -5,7 +5,7 @@
  * @author <a href ="mailto:fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
-namespace app\Repository\Impl\BudgetType;
+namespace App\Repository\Impl\BudgetType;
 
 
 use App\Repository\IGenericRepository;

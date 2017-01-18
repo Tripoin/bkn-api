@@ -12,6 +12,6 @@ use App\ConstantValue\IApplicationConstant;
 
 class ModelBudgetType extends ModelAuditTrails
 {
-    protected $table = IApplicationConstant::BUDGET_TYPE_TABLE_NAME_TABLE_NAME;
+    protected $table = IApplicationConstant::BUDGET_TYPE_TABLE_NAME;
 
 }

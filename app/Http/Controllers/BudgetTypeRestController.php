@@ -10,8 +10,8 @@ namespace app\Http\Controllers;
 
 
 use App\Http\Controllers\BaseRest\ARestController;
-use app\Models\ModelBudgetType;
-use app\Repository\Impl\BudgetType\BudgetTypeRepository;
+use App\Models\ModelBudgetType;
+use App\Repository\Impl\BudgetType\BudgetTypeRepository;
 
 class BudgetTypeRestController extends ARestController
 {

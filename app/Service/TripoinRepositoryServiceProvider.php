@@ -53,6 +53,8 @@ use App\Repository\Impl\SecurityGroup\SecurityUserProfileRepository;
 use App\Repository\Impl\SecurityUser\EloquentRepositoryUser;
 use App\Repository\Impl\SecurityUser\UserRepository;
 
+use App\Repository\Impl\Subject\SubjectCategory\EloquentSubjectCategoryRepository;
+use App\Repository\Impl\Subject\SubjectCategory\SubjectCategoryRepository;
 use App\Repository\Impl\Subject\SubjectType\EloquentRepositorySubjectType;
 use App\Repository\Impl\Subject\SubjectType\SubjectTypeRepository;
 use App\Repository\Impl\Village\EloquentRepositoryVillage;
@@ -84,6 +86,7 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
         $this->app->bind(CertificateRepository::class, EloquentRepositoryCertificate::class);
         $this->app->bind(RoomRepository::class, EloquentRepositoryRoom::class);
         $this->app->bind(AddressRepository::class, EloquentRepositoryAddress::class);
+        $this->app->bind(SubjectCategoryRepository::class, EloquentSubjectCategoryRepository::class);
 
         /*SECURITY*/
         $this->app->bind(UserRepository::class, EloquentRepositoryUser::class);

@@ -5,12 +5,11 @@
  * @author <a href = "fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
-namespace App\Repository\Impl\MenuGenerator;
+namespace App\Repository\Impl\MaterialSubject;
 
 
-interface MaterialSubhectRepository
+interface MaterialSubjectRepository
 {
 
-    public function generateMenu();
 
 }

@@ -294,6 +294,23 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::get('command=100012', 'MaterialSubjectRestController@selectLOV');
             });
 
+            /**
+             * SubjectCategory
+             */
+            Route::group(['prefix' => '130002'], function ()
+            {
+                Route::get('command=100003', 'SubjectCategoryRestController@all');
+                Route::post('command=100004', 'SubjectCategoryRestController@insert');
+                Route::put('command=100005', 'SubjectCategoryRestController@update');
+                Route::delete('command=100006', 'SubjectCategoryRestController@delete');
+                Route::post('command=100007', 'SubjectCategoryRestController@findById');
+                Route::post('command=100008', 'SubjectCategoryRestController@findByCode');
+                Route::post('command=100009', 'SubjectCategoryRestController@findByName');
+                Route::post('command=100010', 'SubjectCategoryRestController@advancedPagination');
+                Route::post('command=100011', 'SubjectCategoryRestController@simplePagination');
+                Route::get('command=100012', 'SubjectCategoryRestController@selectLOV');
+            });
+
         });
 
         /**
