@@ -5,14 +5,13 @@
  * @author <a href ="mailto:fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
-namespace App\Repository\Impl\Address;
+namespace App\Repository\Impl\ChecklistUsage;
 
-
-use App\Models\ModelAddress;
+use App\Models\ModelChecklistUsage;
 use App\Repository\Impl\ABaseRepository;
 use App\Repository\Impl\SecurityUser\UserRepository;
 
-class EloquentRepositoryAddress extends ABaseRepository implements AddressRepository
+class EloquentRepositoryChecklistUsage extends ABaseRepository implements ChecklistUsageRepository
 {
 
     /**
@@ -25,6 +24,10 @@ class EloquentRepositoryAddress extends ABaseRepository implements AddressReposi
 
     public function  getModel()
     {
-        return new ModelAddress();
+        return new ModelChecklistUsage();
     }
+
+
+
+
 }

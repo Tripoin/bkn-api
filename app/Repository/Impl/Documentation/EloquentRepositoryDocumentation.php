@@ -5,14 +5,15 @@
  * @author <a href ="mailto:fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
-namespace App\Repository\Impl\Address;
+namespace App\Repository\Impl\Documentation;
 
 
-use App\Models\ModelAddress;
+use App\Models\ModelDocumentation;
 use App\Repository\Impl\ABaseRepository;
+use App\Repository\Impl\DocumentationRepository;
 use App\Repository\Impl\SecurityUser\UserRepository;
 
-class EloquentRepositoryAddress extends ABaseRepository implements AddressRepository
+class EloquentRepositoryDocumentation extends ABaseRepository implements DocumentationRepository
 {
 
     /**
@@ -25,6 +26,6 @@ class EloquentRepositoryAddress extends ABaseRepository implements AddressReposi
 
     public function  getModel()
     {
-        return new ModelAddress();
+        return new ModelDocumentation();
     }
 }

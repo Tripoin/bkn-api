@@ -5,14 +5,13 @@
  * @author <a href ="mailto:fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
-namespace App\Repository\Impl\Address;
+namespace App\Repository\Impl\ContactMessage;
 
-
-use App\Models\ModelAddress;
+use App\Models\ModelContactMessage;
 use App\Repository\Impl\ABaseRepository;
 use App\Repository\Impl\SecurityUser\UserRepository;
 
-class EloquentRepositoryAddress extends ABaseRepository implements AddressRepository
+class EloquentRepositoryContactMessage extends ABaseRepository implements ContactMessageRepository
 {
 
     /**
@@ -25,6 +24,10 @@ class EloquentRepositoryAddress extends ABaseRepository implements AddressReposi
 
     public function  getModel()
     {
-        return new ModelAddress();
+        return new ModelContactMessage();
     }
+
+
+
+
 }

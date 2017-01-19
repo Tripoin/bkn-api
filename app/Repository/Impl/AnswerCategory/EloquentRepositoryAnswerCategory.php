@@ -5,14 +5,14 @@
  * @author <a href ="mailto:fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
-namespace App\Repository\Impl\Address;
+namespace App\Repository\Impl\AnswerCategory;
 
 
-use App\Models\ModelAddress;
+use App\Models\ModelAnswerCategory;
 use App\Repository\Impl\ABaseRepository;
 use App\Repository\Impl\SecurityUser\UserRepository;
 
-class EloquentRepositoryAddress extends ABaseRepository implements AddressRepository
+class EloquentRepositoryAnswerCategory extends ABaseRepository implements AnswerCategoryRepository
 {
 
     /**
@@ -25,6 +25,10 @@ class EloquentRepositoryAddress extends ABaseRepository implements AddressReposi
 
     public function  getModel()
     {
-        return new ModelAddress();
+        return new ModelAnswerCategory();
     }
+
+
+
+
 }

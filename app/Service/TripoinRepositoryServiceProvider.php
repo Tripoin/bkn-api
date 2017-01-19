@@ -10,15 +10,35 @@ namespace App\Service;
 
 use App\Repository\Impl\Address\AddressRepository;
 use App\Repository\Impl\Address\EloquentRepositoryAddress;
+use App\Repository\Impl\AnswerCategory\AnswerCategoryRepository;
+use App\Repository\Impl\AnswerCategory\EloquentRepositoryAssignmentLetter;
+use App\Repository\Impl\AnswerCategory\EloquentRepositoryEvaluationAssess;
+use App\Repository\Impl\AnswerType\AnswerTypeRepository;
+use App\Repository\Impl\AnswerCategory\EloquentRepositoryAnswerCategory;
+use App\Repository\Impl\AnswerType\EloquentRepositoryAnswerType;
+use App\Repository\Impl\AssignmentLetterRepository;
+use App\Repository\Impl\Attachment\AttachmentRepository;
+use App\Repository\Impl\Attachment\EloquentRepositoryAttachment;
 use App\Repository\Impl\BudgetType\BudgetTypeRepository;
 use App\Repository\Impl\BudgetType\EloquentRepositoryBudgetType;
+use App\Repository\Impl\CalcQuestionnaire\CalcQuestionnaireRepository;
+use App\Repository\Impl\CalcQuestionnaire\EloquentRepositoryCalcQuestionnaire;
 use App\Repository\Impl\Certificate\CertificateRepository;
 use App\Repository\Impl\Certificate\EloquentRepositoryCertificate;
 use App\Repository\Impl\City\EloquentRepositoryCity;
 use App\Repository\Impl\City\CityRepository;
+use App\Repository\Impl\Contact\ContactRepository;
+use App\Repository\Impl\Contact\EloquentRepositoryContact;
+use App\Repository\Impl\ContactMessage\ContactMessageRepository;
+use App\Repository\Impl\ContactMessage\EloquentRepositoryContactMessage;
 use App\Repository\Impl\District\DistrictRepository;
 use App\Repository\Impl\District\EloquentRepositoryDistrict;
 
+use App\Repository\Impl\Evaluation\EloquentRepositoryEvaluation;
+use App\Repository\Impl\Evaluation\EvaluationRepository;
+use App\Repository\Impl\EvaluationAssess\EvaluationAssessRepository;
+use App\Repository\Impl\EvaluationCategory\EloquentRepositoryEvaluationCategory;
+use App\Repository\Impl\EvaluationCategory\EvaluationCategoryRepository;
 use App\Repository\Impl\LevelAkd\EloquentRepositoryLevelAkd;
 use App\Repository\Impl\LevelAkd\LevelAkdRepository;
 use App\Repository\Impl\MaterialSubject\EloquentMaterialSubjectRepository;
@@ -53,8 +73,6 @@ use App\Repository\Impl\SecurityGroup\SecurityUserProfileRepository;
 use App\Repository\Impl\SecurityUser\EloquentRepositoryUser;
 use App\Repository\Impl\SecurityUser\UserRepository;
 
-use App\Repository\Impl\Subject\SubjectCategory\EloquentSubjectCategoryRepository;
-use App\Repository\Impl\Subject\SubjectCategory\SubjectCategoryRepository;
 use App\Repository\Impl\Subject\SubjectType\EloquentRepositorySubjectType;
 use App\Repository\Impl\Subject\SubjectType\SubjectTypeRepository;
 use App\Repository\Impl\Village\EloquentRepositoryVillage;
@@ -86,7 +104,16 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
         $this->app->bind(CertificateRepository::class, EloquentRepositoryCertificate::class);
         $this->app->bind(RoomRepository::class, EloquentRepositoryRoom::class);
         $this->app->bind(AddressRepository::class, EloquentRepositoryAddress::class);
-        $this->app->bind(SubjectCategoryRepository::class, EloquentSubjectCategoryRepository::class);
+        $this->app->bind(AnswerCategoryRepository::class, EloquentRepositoryAnswerCategory::class);
+        $this->app->bind(AnswerTypeRepository::class, EloquentRepositoryAnswerType::class);
+        $this->app->bind(AssignmentLetterRepository::class, EloquentRepositoryAssignmentLetter::class);
+        $this->app->bind(AttachmentRepository::class, EloquentRepositoryAttachment::class);
+        $this->app->bind(CalcQuestionnaireRepository::class, EloquentRepositoryCalcQuestionnaire::class);
+        $this->app->bind(ContactRepository::class, EloquentRepositoryContact::class);
+        $this->app->bind(ContactMessageRepository::class, EloquentRepositoryContactMessage::class);
+        $this->app->bind(EvaluationRepository::class, EloquentRepositoryEvaluation::class);
+        $this->app->bind(EvaluationAssessRepository::class, EloquentRepositoryEvaluationAssess::class);
+        $this->app->bind(EvaluationCategoryRepository::class, EloquentRepositoryEvaluationCategory::class);
 
         /*SECURITY*/
         $this->app->bind(UserRepository::class, EloquentRepositoryUser::class);

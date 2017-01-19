@@ -10,9 +10,9 @@ namespace App\Models;
 
 use App\ConstantValue\IApplicationConstant;
 
-class ModelContactMessage extends ModelAuditTrails
+class ModelChecklistUsage extends ModelAuditTrails
 {
-    protected $table = IApplicationConstant::CONTACT_MESSAGE_TABLE_NAME;
+    protected $table = IApplicationConstant::CHECKLIST_USAGE_TABLE_NAME;
 
     protected $fillable = array
     (
@@ -24,10 +24,9 @@ class ModelContactMessage extends ModelAuditTrails
         IApplicationConstant::CREATED_BY,
         IApplicationConstant::CREATED_ON,
         IApplicationConstant::MODIFIED_BY,
-        IApplicationConstant::MODIFIED_ON,
-        IApplicationConstant::CONTACT_MESSAGE_CONTENT,
-        IApplicationConstant::CONTACT_MESSAGE_GUEST_NAME,
-        IApplicationConstant::CONTACT_MESSAGE_GUEST_EMAIL,
-        IApplicationConstant::CONTACT_MESSAGE_SUBJECT,
+        IApplicationConstant::CHECKLIST_USAGE_BOOKING_ID,
+        IApplicationConstant::CHECKLIST_USAGE_IS_LOSS,
+        IApplicationConstant::CHECKLIST_USAGE_JSON_CHECKLIST,
     );
+
 }

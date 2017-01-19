@@ -5,14 +5,14 @@
  * @author <a href ="mailto:fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
-namespace App\Repository\Impl\Address;
+namespace App\Repository\Impl\AssignmentLetter;
 
-
-use App\Models\ModelAddress;
+use App\Models\ModelAssignmentLetter;
 use App\Repository\Impl\ABaseRepository;
+use App\Repository\Impl\AssignmentLetterRepository;
 use App\Repository\Impl\SecurityUser\UserRepository;
 
-class EloquentRepositoryAddress extends ABaseRepository implements AddressRepository
+class EloquentRepositoryAssignmentLetter extends ABaseRepository implements AssignmentLetterRepository
 {
 
     /**
@@ -25,6 +25,10 @@ class EloquentRepositoryAddress extends ABaseRepository implements AddressReposi
 
     public function  getModel()
     {
-        return new ModelAddress();
+        return new ModelAssignmentLetter();
     }
+
+
+
+
 }

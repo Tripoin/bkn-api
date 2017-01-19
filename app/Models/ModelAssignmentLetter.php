@@ -10,9 +10,9 @@ namespace App\Models;
 
 use App\ConstantValue\IApplicationConstant;
 
-class ModelContactMessage extends ModelAuditTrails
+class ModelAssignmentLetter extends ModelAuditTrails
 {
-    protected $table = IApplicationConstant::CONTACT_MESSAGE_TABLE_NAME;
+    protected $table = IApplicationConstant::ASSIGNMENT_LETTER_TABLE_NAME;
 
     protected $fillable = array
     (
@@ -25,9 +25,8 @@ class ModelContactMessage extends ModelAuditTrails
         IApplicationConstant::CREATED_ON,
         IApplicationConstant::MODIFIED_BY,
         IApplicationConstant::MODIFIED_ON,
-        IApplicationConstant::CONTACT_MESSAGE_CONTENT,
-        IApplicationConstant::CONTACT_MESSAGE_GUEST_NAME,
-        IApplicationConstant::CONTACT_MESSAGE_GUEST_EMAIL,
-        IApplicationConstant::CONTACT_MESSAGE_SUBJECT,
+        IApplicationConstant::ASSIGNMENT_LETTER_COL_LETTER_TITLE,
+        IApplicationConstant::ASSIGNMENT_LETTER_COL_LETTER_BODY,
+        IApplicationConstant::ASSIGNMENT_LETTER_COL_SIGNATURE,
     );
 }

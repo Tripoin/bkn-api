@@ -131,6 +131,23 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::get('command=100012', 'VillageRestController@selectLOV');
             });
 
+			/**
+             * Documentation
+             */
+            Route::group(['prefix' => '130006'], function ()
+            {
+                Route::get('command=100003', 'ProvinceRestController@all');
+                Route::post('command=100004', 'ProvinceRestController@insert');
+                Route::put('command=100005', 'ProvinceRestController@update');
+                Route::delete('command=100006', 'ProvinceRestController@delete');
+                Route::post('command=100007', 'ProvinceRestController@findById');
+                Route::post('command=100008', 'ProvinceRestController@findByCode');
+                Route::post('command=100009', 'ProvinceRestController@findByName');
+                Route::post('command=100010', 'ProvinceRestController@advancedPagination');
+                Route::post('command=100011', 'ProvinceRestController@simplePagination');
+                Route::get('command=100012', 'ProvinceRestController@selectLOV');
+            });
+			
             /**
              * Certificate
              */
@@ -310,7 +327,150 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::post('command=100011', 'SubjectCategoryRestController@simplePagination');
                 Route::get('command=100012', 'SubjectCategoryRestController@selectLOV');
             });
-
+            /**
+             * Assignment Letter
+             */
+            Route::group(['prefix' => '130014'], function ()
+            {
+                Route::get('command=100003', 'AssignmentLetterRestController@all');
+                Route::post('command=100004', 'AssignmentLetterRestController@insert');
+                Route::put('command=100005', 'AssignmentLetterRestController@update');
+                Route::delete('command=100006', 'AssignmentLetterRestController@delete');
+                Route::post('command=100007', 'AssignmentLetterRestController@findById');
+                Route::post('command=100008', 'AssignmentLetterRestController@findByCode');
+                Route::post('command=100009', 'AssignmentLetterRestController@findByName');
+                Route::post('command=100010', 'AssignmentLetterRestController@advancedPagination');
+                Route::post('command=100011', 'AssignmentLetterRestController@simplePagination');
+                Route::get('command=100012', 'AssignmentLetterRestController@selectLOV');
+            });
+            /**
+             * Answer Category
+             */
+            Route::group(['prefix' => '130050'], function ()
+            {
+                Route::get('command=100003', 'AnswerCategoryRestController@all');
+                Route::post('command=100004', 'AnswerCategoryRestController@insert');
+                Route::put('command=100005', 'AnswerCategoryRestController@update');
+                Route::delete('command=100006', 'AnswerCategoryRestController@delete');
+                Route::post('command=100007', 'AnswerCategoryRestController@findById');
+                Route::post('command=100008', 'AnswerCategoryRestController@findByCode');
+                Route::post('command=100009', 'AnswerCategoryRestController@findByName');
+                Route::post('command=100010', 'AnswerCategoryRestController@advancedPagination');
+                Route::post('command=100011', 'AnswerCategoryRestController@simplePagination');
+                Route::get('command=100012', 'AnswerCategoryRestController@selectLOV');
+            });
+            /**
+             * Answer Type
+             */
+            Route::group(['prefix' => '130051'], function ()
+            {
+                Route::get('command=100003', 'AnswerTypeRestController@all');
+                Route::post('command=100004', 'AnswerTypeRestController@insert');
+                Route::put('command=100005', 'AnswerTypeRestController@update');
+                Route::delete('command=100006', 'AnswerTypeRestController@delete');
+                Route::post('command=100007', 'AnswerTypeRestController@findById');
+                Route::post('command=100008', 'AnswerTypeRestController@findByCode');
+                Route::post('command=100009', 'AnswerTypeRestController@findByName');
+                Route::post('command=100010', 'AnswerTypeRestController@advancedPagination');
+                Route::post('command=100011', 'AnswerTypeRestController@simplePagination');
+                Route::get('command=100012', 'AnswerTypeRestController@selectLOV');
+            });
+            /**
+             * Attachment
+             */
+            Route::group(['prefix' => '130052'], function ()
+            {
+                Route::get('command=100003', 'AttachmentRestController@all');
+                Route::post('command=100004', 'AttachmentRestController@insert');
+                Route::put('command=100005', 'AttachmentRestController@update');
+                Route::delete('command=100006', 'AttachmentRestController@delete');
+                Route::post('command=100007', 'AttachmentRestController@findById');
+                Route::post('command=100008', 'AttachmentRestController@findByCode');
+                Route::post('command=100009', 'AttachmentRestController@findByName');
+                Route::post('command=100010', 'AttachmentRestController@advancedPagination');
+                Route::post('command=100011', 'AttachmentRestController@simplePagination');
+                Route::get('command=100012', 'AttachmentRestController@selectLOV');
+            });
+            /**
+             * Checklist Usage
+             */
+            Route::group(['prefix' => '130017'], function ()
+            {
+                Route::get('command=100003', 'ChecklistUsageRestController@all');
+                Route::post('command=100004', 'ChecklistUsageRestController@insert');
+                Route::put('command=100005', 'ChecklistUsageRestController@update');
+                Route::delete('command=100006', 'ChecklistUsageRestController@delete');
+                Route::post('command=100007', 'ChecklistUsageRestController@findById');
+                Route::post('command=100008', 'ChecklistUsageRestController@findByCode');
+                Route::post('command=100009', 'ChecklistUsageRestController@findByName');
+                Route::post('command=100010', 'ChecklistUsageRestController@advancedPagination');
+                Route::post('command=100011', 'ChecklistUsageRestController@simplePagination');
+                Route::get('command=100012', 'ChecklistUsageRestController@selectLOV');
+            });
+            /**
+             * Contact
+             */
+            Route::group(['prefix' => '130039'], function ()
+            {
+                Route::get('command=100003', 'ContactRestController@all');
+                Route::post('command=100004', 'ContactRestController@insert');
+                Route::put('command=100005', 'ContactRestController@update');
+                Route::delete('command=100006', 'ContactRestController@delete');
+                Route::post('command=100007', 'ContactRestController@findById');
+                Route::post('command=100008', 'ContactRestController@findByCode');
+                Route::post('command=100009', 'ContactRestController@findByName');
+                Route::post('command=100010', 'ContactRestController@advancedPagination');
+                Route::post('command=100011', 'ContactRestController@simplePagination');
+                Route::get('command=100012', 'ContactRestController@selectLOV');
+            });
+            /**
+             * Contact Message
+             */
+            Route::group(['prefix' => '130054'], function ()
+            {
+                Route::get('command=100003', 'ContactMessageRestController@all');
+                Route::post('command=100004', 'ContactMessageRestController@insert');
+                Route::put('command=100005', 'ContactMessageRestController@update');
+                Route::delete('command=100006', 'ContactMessageRestController@delete');
+                Route::post('command=100007', 'ContactMessageRestController@findById');
+                Route::post('command=100008', 'ContactMessageRestController@findByCode');
+                Route::post('command=100009', 'ContactMessageRestController@findByName');
+                Route::post('command=100010', 'ContactMessageRestController@advancedPagination');
+                Route::post('command=100011', 'ContactMessageRestController@simplePagination');
+                Route::get('command=100012', 'ContactMessageRestController@selectLOV');
+            });
+            /**
+             * Evaluation
+             */
+            Route::group(['prefix' => '130055'], function ()
+            {
+                Route::get('command=100003', 'EvaluationRestController@all');
+                Route::post('command=100004', 'EvaluationRestController@insert');
+                Route::put('command=100005', 'EvaluationRestController@update');
+                Route::delete('command=100006', 'EvaluationRestController@delete');
+                Route::post('command=100007', 'EvaluationRestController@findById');
+                Route::post('command=100008', 'EvaluationRestController@findByCode');
+                Route::post('command=100009', 'EvaluationRestController@findByName');
+                Route::post('command=100010', 'EvaluationRestController@advancedPagination');
+                Route::post('command=100011', 'EvaluationRestController@simplePagination');
+                Route::get('command=100012', 'EvaluationRestController@selectLOV');
+            });
+            /**
+             * Evaluation Assess
+             */
+            Route::group(['prefix' => '130056'], function ()
+            {
+                Route::get('command=100003', 'EvaluationAssessRestController@all');
+                Route::post('command=100004', 'EvaluationAssessRestController@insert');
+                Route::put('command=100005', 'EvaluationAssessRestController@update');
+                Route::delete('command=100006', 'EvaluationAssessRestController@delete');
+                Route::post('command=100007', 'EvaluationAssessRestController@findById');
+                Route::post('command=100008', 'EvaluationAssessRestController@findByCode');
+                Route::post('command=100009', 'EvaluationAssessRestController@findByName');
+                Route::post('command=100010', 'EvaluationAssessRestController@advancedPagination');
+                Route::post('command=100011', 'EvaluationAssessRestController@simplePagination');
+                Route::get('command=100012', 'EvaluationAssessRestController@selectLOV');
+            });
         });
 
         /**
