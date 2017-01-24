@@ -17,14 +17,11 @@ class ModelSubject extends ModelAuditTrails
 
     protected $fillable = array
     (
-        IApplicationConstant::SUBJECT_DURATION,
-        IApplicationConstant::SUBJECT_UNIT_ID,
-        IApplicationConstant::SUBJECT_AMOUNT,
         IApplicationConstant::BUDGET_TYPE_ID,
+        IApplicationConstant::SUBJECT_AMOUNT,
         IApplicationConstant::SUBJECT_LOCATION,
-        IApplicationConstant::START_SUBJECT,
-        IApplicationConstant::END_SUBJECT,
         IApplicationConstant::SUBJECT_NECESSARY_DESC,
-        IApplicationConstant::SUBJECT_TYPE_ID
+        IApplicationConstant::SUBJECT_PARENT_ID,
+
     );
 }

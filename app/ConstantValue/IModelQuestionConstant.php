@@ -16,9 +16,9 @@ interface IModelQuestionConstant
      */
     const MST_QUESTION_TABLE        = 'mst_question';
     const QUESTION_CATEGORY_ID      = 'question_category_id';
-    const QUESTION_TYPE_ID          = 'question_type_id';
     const QUESTION_DETAILS          = 'question_details';
     const JSON_QUESTION             = 'json_question';
+    const ANSWER_CATEGORY_ID          = 'answer_category_id';
 
     /**
      * mst_question_category

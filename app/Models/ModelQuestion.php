@@ -19,8 +19,10 @@ class ModelQuestion extends ModelAuditTrails
     protected $fillable = array
     (
         IApplicationConstant::QUESTION_CATEGORY_ID,
-        IApplicationConstant::QUESTION_TYPE_ID,
         IApplicationConstant::QUESTION_DETAILS,
-        IApplicationConstant::JSON_QUESTION
+        IApplicationConstant::JSON_QUESTION,
+        IApplicationConstant::ANSWER_CATEGORY_ID
+
+
     );
 }
