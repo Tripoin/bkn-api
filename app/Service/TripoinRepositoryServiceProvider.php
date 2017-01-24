@@ -57,6 +57,8 @@ use App\Repository\Impl\Question\QuestionType\QuestionTypeRepository;
 use App\Repository\Impl\Questionnaire\EloquentRepositoryQuestionnaire;
 use App\Repository\Impl\Questionnaire\QuestionnaireRepository;
 
+use App\Repository\Impl\Religion\EloquentRepositoryReligion;
+use App\Repository\Impl\Religion\ReligionRepository;
 use App\Repository\Impl\Room\EloquentRepositoryRoom;
 use App\Repository\Impl\Room\RoomRepository;
 
@@ -114,6 +116,7 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
         $this->app->bind(EvaluationRepository::class, EloquentRepositoryEvaluation::class);
         $this->app->bind(EvaluationAssessRepository::class, EloquentRepositoryEvaluationAssess::class);
         $this->app->bind(EvaluationCategoryRepository::class, EloquentRepositoryEvaluationCategory::class);
+        $this->app->bind(ReligionRepository::class, EloquentRepositoryReligion::class);
 
         /*SECURITY*/
         $this->app->bind(UserRepository::class, EloquentRepositoryUser::class);
