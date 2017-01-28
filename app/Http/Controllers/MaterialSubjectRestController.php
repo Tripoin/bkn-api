@@ -19,7 +19,7 @@ class MaterialSubjectRestController  extends ARestController
 
 
     /**
-     * BudgetTypeRestController constructor.
+     * MaterialSubjectconstructor.
      */
     public function __construct(MaterialSubjectRepository $materialSubjectRepository)
     {

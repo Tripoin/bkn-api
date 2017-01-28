@@ -1,17 +1,19 @@
 <?php
 /**
- * @project bkn-api
- * @since 30/12/2015 - 8:00 PM
- * @author <a href ="mailto:fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
+ * Created by PhpStorm.
+ * User: fadhilprm
+ * Date: 1/29/17
+ * Time: 2:03 AM
  */
 
-namespace App\Repository\Impl\Room;
+namespace App\Repository\Impl\Facility;
 
-use App\Models\ModelRoom;
+
+use App\Models\ModelFacility;
 use App\Repository\Impl\ABaseRepository;
 use App\Repository\Impl\SecurityUser\UserRepository;
 
-class EloquentRepositoryRoom extends ABaseRepository implements RoomRepository
+class EloquentFacilityRepository extends ABaseRepository implements FacilityRepository
 {
 
     /**
@@ -24,6 +26,6 @@ class EloquentRepositoryRoom extends ABaseRepository implements RoomRepository
 
     public function  getModel()
     {
-        return new ModelRoom();
+        return new ModelFacility();
     }
 }
