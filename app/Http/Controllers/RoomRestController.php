@@ -39,6 +39,7 @@ class RoomRestController extends ARestController
         foreach($content as $item){
             $item->facility_id = $this->facilityRepository->findById($item->facility_id);
         }
+        Log::info('get room with facility');
         return $content;
     }
 }
