@@ -11,12 +11,12 @@ namespace App\Service;
 use App\Repository\Impl\Address\AddressRepository;
 use App\Repository\Impl\Address\EloquentRepositoryAddress;
 use App\Repository\Impl\AnswerCategory\AnswerCategoryRepository;
-use App\Repository\Impl\AnswerCategory\EloquentRepositoryAssignmentLetter;
+use App\Repository\Impl\AssignmentLetter\EloquentRepositoryAssignmentLetter;
 use App\Repository\Impl\AnswerCategory\EloquentRepositoryEvaluationAssess;
 use App\Repository\Impl\AnswerType\AnswerTypeRepository;
 use App\Repository\Impl\AnswerCategory\EloquentRepositoryAnswerCategory;
 use App\Repository\Impl\AnswerType\EloquentRepositoryAnswerType;
-use App\Repository\Impl\AssignmentLetterRepository;
+use App\Repository\Impl\AssignmentLetter\AssignmentLetterRepository;
 use App\Repository\Impl\Attachment\AttachmentRepository;
 use App\Repository\Impl\Attachment\EloquentRepositoryAttachment;
 use App\Repository\Impl\BudgetType\BudgetTypeRepository;
@@ -57,6 +57,8 @@ use App\Repository\Impl\Question\QuestionType\QuestionTypeRepository;
 use App\Repository\Impl\Questionnaire\EloquentRepositoryQuestionnaire;
 use App\Repository\Impl\Questionnaire\QuestionnaireRepository;
 
+use App\Repository\Impl\Registration\EloquentRepositoryRegistration;
+use App\Repository\Impl\Registration\RegistrationRepository;
 use App\Repository\Impl\Room\EloquentRepositoryRoom;
 use App\Repository\Impl\Room\RoomRepository;
 
@@ -127,6 +129,6 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
         $this->app->bind(MaterialSubjectRepository::class, EloquentMaterialSubjectRepository::class);
 
         /*TRANSACTION*/
-
+        $this->app->bind(RegistrationRepository::class, EloquentRepositoryRegistration::class);
     }
 }

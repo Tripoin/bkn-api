@@ -9,7 +9,6 @@ namespace App\Repository\Impl\AssignmentLetter;
 
 use App\Models\ModelAssignmentLetter;
 use App\Repository\Impl\ABaseRepository;
-use App\Repository\Impl\AssignmentLetterRepository;
 use App\Repository\Impl\SecurityUser\UserRepository;
 
 class EloquentRepositoryAssignmentLetter extends ABaseRepository implements AssignmentLetterRepository
