@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: Dayat
  * Date: 19/01/2017
- * Time: 19:59
+ * Time: 20:01
  */
 
 namespace App\Models;
@@ -11,12 +11,12 @@ namespace App\Models;
 
 use App\ConstantValue\IApplicationConstant;
 
-class ModelEvaluation extends ModelAuditTrails
+class ModelEvaluationAssess extends ModelAuditTrails
 {
-    protected $table = IApplicationConstant::MST_EVALUATION_TABLE;
+    protected $table = IApplicationConstant::MST_EVALUATION_ASSESS_TABLE;
 
     protected $fillable = array
     (
-        IApplicationConstant::EVALUATION_RATE_VALUE
+        IApplicationConstant::EVALUATION_CATEGORY_ID
     );
 }

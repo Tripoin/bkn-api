@@ -11,16 +11,19 @@ namespace App\ConstantValue;
 
 interface IModelContactConstant
 {
+    /**
+     * mst_contact
+     */
+    const CONTACT_TABLE_NAME                = 'mst_contact';
+    const CONTACT_EMAIL1                    = 'email_1';
+    const CONTACT_EMAIL2                    = 'email_2';
+    const CONTACT_PHONE_NUMBER1             = 'phone_number_1';
+    const CONTACT_PHONE_NUMBER2             = 'phone_number_2';
+    const CONTACT_FAX                       = 'fax';
 
-    const CONTACT_MODEL_NAME        = 'contact';
-    const CONTACT_TABLE_NAME        = 'mst_contact';
-
-    const EMAIL1                    = 'email_1';
-    const EMAIL2                    = 'email_2';
-    const PHONE_NUMBER1             = 'phone_number_1';
-    const PHONE_NUMBER2             = 'phone_number_2';
-    const FAX                       = 'fax';
-
+    /**
+     * mst_contact_message
+     */
     const CONTACT_MESSAGE_TABLE_NAME    = 'mst_contact_message';
     const CONTACT_MESSAGE_MODEL_NAME    = 'contact_message';
     const CONTACT_MESSAGE_GUEST_NAME    = 'contact_message_guest_name';

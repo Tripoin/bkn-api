@@ -10,8 +10,8 @@ namespace app\ConstantValue;
 
 interface IModelCertificateConstant
 {
+    const CERTIFICATE_TABLE_NAME       = 'mst_certificate';
     const CERTIFICATE_COL_SIGNATURE_1  = 'signature_1';
     const CERTIFICATE_COL_SIGNATURE_2  = 'signature_2';
     const CERTIFICATE_COL_EXPIRED  = 'expired';
-    const CERTIFICATE_TABLE_NAME       = 'mst_certificate';
 }
