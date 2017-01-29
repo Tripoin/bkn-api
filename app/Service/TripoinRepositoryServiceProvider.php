@@ -85,6 +85,8 @@ use App\Repository\Impl\Subject\SubjectType\EloquentRepositorySubjectType;
 use App\Repository\Impl\Subject\SubjectType\SubjectTypeRepository;
 use App\Repository\Impl\Village\EloquentRepositoryVillage;
 use App\Repository\Impl\Village\VillageRepository;
+use App\Service\Registration\IRegistrationService;
+use App\Service\Registration\RegistrationServiceImpl;
 use Illuminate\Support\ServiceProvider;
 
 class TripoinRepositoryServiceProvider extends ServiceProvider
@@ -97,6 +99,10 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        /**
+         * Binding REPOSITORY
+         */
+        /*====================================================START REPO BINDING=================================================*/
         /*MDA*/
         $this->app->bind(CityRepository::class, EloquentRepositoryCity::class);
         $this->app->bind(DistrictRepository::class, EloquentRepositoryDistrict::class);
@@ -139,5 +145,12 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
 
         /*TRANSACTION*/
         $this->app->bind(RegistrationRepository::class, EloquentRepositoryRegistration::class);
+        /*====================================================END REPO BINDING=================================================*/
+
+        /**
+         * BINDING SERVICE
+         */
+        /*TRANSACTION*/
+        $this->app->bind(IRegistrationService::class, RegistrationServiceImpl::class);
     }
 }

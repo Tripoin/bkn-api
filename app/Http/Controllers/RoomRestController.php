@@ -9,21 +9,36 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Controllers\BaseRest\ARestController;
-use App\Models\ModelCertificate;
 use App\Models\ModelRoom;
+use App\Repository\Impl\Facility\FacilityRepository;
 use App\Repository\Impl\Room\RoomRepository;
+use Illuminate\Support\Facades\Log;
 
 class RoomRestController extends ARestController
 {
 
-    public function __construct(RoomRepository $roomRepository)
+    private $facilityRepository;
+
+    public function __construct(RoomRepository $roomRepository, FacilityRepository $facilityRepository)
     {
         $this->repository = $roomRepository;
+        $this->facilityRepository = $facilityRepository;
         parent::__construct();
     }
 
     public function getModel()
     {
         return new ModelRoom();
+    }
+
+
+    public function getRoomWithFacility(){
+        $result = $this->hardCorePagination();
+        $content = json_encode($result);
+        $content = json_decode($content)->data;
+        foreach($content as $item){
+            $item->facility_id = $this->facilityRepository->findById($item->facility_id);
+        }
+        return $content;
     }
 }

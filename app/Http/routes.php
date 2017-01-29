@@ -209,7 +209,7 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::post('command=100007', 'RoomRestController@findById');
                 Route::post('command=100008', 'RoomRestController@findByCode');
                 Route::post('command=100009', 'RoomRestController@findByName');
-                Route::post('command=100010', 'RoomRestController@advancedPagination');
+                Route::post('command=100010', 'RoomRestController@getRoomWithFacility');
                 Route::post('command=100011', 'RoomRestController@simplePagination');
                 Route::get('command=100012', 'RoomRestController@selectLOV');
                 Route::get('command=100013', 'RoomRestController@all');
@@ -600,38 +600,14 @@ Route::group(['prefix' => '000000/1/'], function ()
         Route::group(['prefix' => '200000'], function ()
         {
             /**
-             * Benefit Provider REST
+             * Registration
              */
-            Route::group(['prefix' => '130002'], function ()
+            Route::group(['prefix' => '200004'], function ()
             {
                 /**
-                 * Register Benefit Provider REST
+                 * Register Participant REST
                  */
-                Route::post('command=100003', 'RegisterProviderRestController@listWithPagination');
-                Route::post('command=100004', 'RegisterProviderRestController@registerNewProvider');
-                Route::post('command=100012', 'RegisterProviderRestController@approvalRegisteredNewProvider');
-                Route::post('command=100013', 'RegisterProviderRestController@rejectedNewProvider');
-                Route::post('command=100010', 'RegisterProviderRestController@advancedPagination');
-
-                /**
-                 * Edited Benefit Provider REST
-                 */
-                Route::post('command=100005', 'EditProviderRestController@advancedPagination');
-                Route::post('command=100006', 'EditProviderRestController@listEditWithPagination');
-                Route::post('command=100007', 'EditProviderRestController@listStagingWithPagination');
-                Route::post('command=100011', 'EditProviderRestController@saveEdited');
-                Route::post('command=100014', 'EditProviderRestController@approvedEdited');
-                Route::post('command=100015', 'EditProviderRestController@rejectedEdited');
-
-                /**
-                 * Cancel Benefit Provider REST
-                 */
-                Route::post('command=100016', 'CancelProviderRestController@advancedPagination');
-                Route::post('command=100017', 'CancelProviderRestController@listForCancellation');
-                Route::post('command=100018', 'CancelProviderRestController@doCancellation');
-                Route::post('command=100019', 'CancelProviderRestController@listForApprovedCancel');
-                Route::post('command=100020', 'CancelProviderRestController@approveCancellation');
-                Route::post('command=100021', 'CancelProviderRestController@rejectCancellation');
+                Route::post('command=100004', 'RegistrationRestController@register');
             });
         });
 

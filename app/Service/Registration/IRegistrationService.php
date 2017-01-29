@@ -5,18 +5,17 @@
  * @author <a href = "fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
+namespace App\Service\Registration;
 
-namespace App\Repository\Impl\Registration;
 
+use App\Service\ITripoinService;
 
-use App\Repository\IGenericRepository;
-
-interface RegistrationRepository extends IGenericRepository
+interface IRegistrationService extends ITripoinService
 {
 
     /**
      * @param $dataRegistration
-     * @return mixed -1 : failed, 0 success
+     * @return mixed -1 : failed , 0 : failed
      */
     public function register($dataRegistration);
 }

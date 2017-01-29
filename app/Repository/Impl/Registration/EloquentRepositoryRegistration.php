@@ -11,6 +11,8 @@ namespace App\Repository\Impl\Registration;
 use App\Models\ModelRegistration;
 use App\Repository\Impl\ABaseRepository;
 use App\Repository\Impl\SecurityUser\UserRepository;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class EloquentRepositoryRegistration extends ABaseRepository implements RegistrationRepository
 {
@@ -28,4 +30,24 @@ class EloquentRepositoryRegistration extends ABaseRepository implements Registra
         return new ModelRegistration();
     }
 
+    public function register($dataRegistration)
+    {
+        if (is_null($dataRegistration)){
+            return -1;
+            Log::error("data reg null");
+        }
+        try{
+            DB::beginTransaction();
+            Log::error("start transac");
+            $dataRegistration->user_id = $this->userRepository->getUserLoggedIn()->id;
+            parent::insert($dataRegistration);
+            DB::commit();
+            Log::error("done transac");
+            return 0;
+        }catch (\Exception $e){
+            DB::rollback();
+            Log::error($e->getTraceAsString());
+            return -1;
+        }
+    }
 }
