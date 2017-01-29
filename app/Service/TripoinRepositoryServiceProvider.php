@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @project pip-rest.
+ * @project bkn-api.
  * @since 8/23/2016 6:43 PM
  * @author <a href = "fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
@@ -11,12 +11,12 @@ namespace App\Service;
 use App\Repository\Impl\Address\AddressRepository;
 use App\Repository\Impl\Address\EloquentRepositoryAddress;
 use App\Repository\Impl\AnswerCategory\AnswerCategoryRepository;
-use App\Repository\Impl\AnswerCategory\EloquentRepositoryAssignmentLetter;
+use App\Repository\Impl\AssignmentLetter\EloquentRepositoryAssignmentLetter;
 use App\Repository\Impl\AnswerCategory\EloquentRepositoryEvaluationAssess;
 use App\Repository\Impl\AnswerType\AnswerTypeRepository;
 use App\Repository\Impl\AnswerCategory\EloquentRepositoryAnswerCategory;
 use App\Repository\Impl\AnswerType\EloquentRepositoryAnswerType;
-use App\Repository\Impl\AssignmentLetterRepository;
+use App\Repository\Impl\AssignmentLetter\AssignmentLetterRepository;
 use App\Repository\Impl\Attachment\AttachmentRepository;
 use App\Repository\Impl\Attachment\EloquentRepositoryAttachment;
 use App\Repository\Impl\BudgetType\BudgetTypeRepository;
@@ -41,8 +41,8 @@ use App\Repository\Impl\EvaluationCategory\EloquentRepositoryEvaluationCategory;
 use App\Repository\Impl\EvaluationCategory\EvaluationCategoryRepository;
 use App\Repository\Impl\Facility\EloquentFacilityRepository;
 use App\Repository\Impl\Facility\FacilityRepository;
-use App\Repository\Impl\LevelAkd\EloquentRepositoryLevelAkd;
-use App\Repository\Impl\LevelAkd\LevelAkdRepository;
+use App\Repository\Impl\LevelQuestionnaire\EloquentRepositoryLevelQuestionnaire;
+use App\Repository\Impl\LevelQuestionnaire\LevelQuestionnaireRepository;
 use App\Repository\Impl\MaterialSubject\EloquentMaterialSubjectRepository;
 use App\Repository\Impl\MenuGenerator\EloquentRepositoryMenuGenerator;
 use App\Repository\Impl\MaterialSubject\MaterialSubjectRepository;
@@ -63,6 +63,10 @@ use App\Repository\Impl\Questionnaire\QuestionnaireRepository;
 
 use App\Repository\Impl\QuestionSelected\EloquentQuestionSelectedRepository;
 use App\Repository\Impl\QuestionSelected\QuestionSelectedRepository;
+
+use App\Repository\Impl\Registration\EloquentRepositoryRegistration;
+use App\Repository\Impl\Registration\RegistrationRepository;
+
 use App\Repository\Impl\Religion\EloquentRepositoryReligion;
 use App\Repository\Impl\Religion\ReligionRepository;
 use App\Repository\Impl\Room\EloquentRepositoryRoom;
@@ -91,6 +95,8 @@ use App\Repository\Impl\Unit\EloquentUnitRepository;
 use App\Repository\Impl\Unit\UnitRepository;
 use App\Repository\Impl\Village\EloquentRepositoryVillage;
 use App\Repository\Impl\Village\VillageRepository;
+use App\Service\Registration\IRegistrationService;
+use App\Service\Registration\RegistrationServiceImpl;
 use Illuminate\Support\ServiceProvider;
 
 class TripoinRepositoryServiceProvider extends ServiceProvider
@@ -103,6 +109,10 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        /**
+         * Binding REPOSITORY
+         */
+        /*====================================================START REPO BINDING=================================================*/
         /*MDA*/
         $this->app->bind(CityRepository::class, EloquentRepositoryCity::class);
         $this->app->bind(DistrictRepository::class, EloquentRepositoryDistrict::class);
@@ -111,7 +121,7 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
         $this->app->bind(QuestionCategoryRepository::class, EloquentRepositoryQuestionCategory::class);
         $this->app->bind(QuestionRepository::class, EloquentRepositoryQuestion::class);
         $this->app->bind(QuestionnaireRepository::class, EloquentRepositoryQuestionnaire::class);
-        $this->app->bind(LevelAkdRepository::class, EloquentRepositoryLevelAkd::class);
+        $this->app->bind(LevelQuestionnaireRepository::class, EloquentRepositoryLevelQuestionnaire::class);
         $this->app->bind(SubjectTypeRepository::class, EloquentRepositorySubjectType::class);
         $this->app->bind(SubjectCategoryRepository::class, EloquentSubjectCategoryRepository::class);
 		$this->app->bind(ProvinceRepository::class, EloquentRepositoryProvince::class);
@@ -148,6 +158,13 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
         $this->app->bind(MaterialSubjectRepository::class, EloquentMaterialSubjectRepository::class);
 
         /*TRANSACTION*/
+        $this->app->bind(RegistrationRepository::class, EloquentRepositoryRegistration::class);
+        /*====================================================END REPO BINDING=================================================*/
 
+        /**
+         * BINDING SERVICE
+         */
+        /*TRANSACTION*/
+        $this->app->bind(IRegistrationService::class, RegistrationServiceImpl::class);
     }
 }

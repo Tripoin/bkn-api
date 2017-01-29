@@ -13,4 +13,5 @@ use App\Repository\IGenericRepository;
 interface RoomRepository extends IGenericRepository
 {
 
+    public function hardcorePaginationRoomWithFacility($p_DATA);
 }

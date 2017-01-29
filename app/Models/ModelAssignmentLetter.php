@@ -16,17 +16,9 @@ class ModelAssignmentLetter extends ModelAuditTrails
 
     protected $fillable = array
     (
-        IApplicationConstant::ID,
-        IApplicationConstant::CODE,
-        IApplicationConstant::NAME,
-        IApplicationConstant::DESCRIPTION,
-        IApplicationConstant::STATUS,
-        IApplicationConstant::CREATED_BY,
-        IApplicationConstant::CREATED_ON,
-        IApplicationConstant::MODIFIED_BY,
-        IApplicationConstant::MODIFIED_ON,
         IApplicationConstant::ASSIGNMENT_LETTER_COL_LETTER_TITLE,
         IApplicationConstant::ASSIGNMENT_LETTER_COL_LETTER_BODY,
         IApplicationConstant::ASSIGNMENT_LETTER_COL_SIGNATURE,
+        IApplicationConstant::ASSIGNMENT_LETTER_COL_LETTER_FOOTER
     );
 }

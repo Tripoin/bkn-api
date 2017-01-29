@@ -11,4 +11,6 @@ namespace app\ConstantValue;
 interface IModelAnswerTypeConstant
 {
     const ANSWER_TYPE_TABLE_NAME       = 'mst_answer_type';
+
+    const ANSWER_CATEGORY_ID           = 'answer_category_id';
 }

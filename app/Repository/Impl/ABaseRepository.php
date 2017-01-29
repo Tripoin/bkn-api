@@ -229,7 +229,6 @@ abstract class ABaseRepository extends ABaseAuditTrail implements IGenericReposi
         $sortingKey = $p_DATA[IApplicationConstant::SORTING_KEY];
         $sortingDirection = $p_DATA[IApplicationConstant::SORTING_DIRECTION];
         $filterData = $p_DATA[IApplicationConstant::FILTER_DATA];
-
         foreach ($filterData as $filter) {
             $filterQuery [] = array(
                 $filter[IApplicationConstant::FILTER_KEY],

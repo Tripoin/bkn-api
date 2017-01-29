@@ -17,6 +17,7 @@ class ModelMaterialSubject extends ModelAuditTrails
 
     protected $fillable = array
     (
+        IApplicationConstant::MATERIAL_SUBJECT_IS_MATERIAL,
         IApplicationConstant::DURATION,
         IApplicationConstant::UNIT_ID,
         IApplicationConstant::AUTHOR_NAME,

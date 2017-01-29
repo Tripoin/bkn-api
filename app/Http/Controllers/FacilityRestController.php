@@ -15,9 +15,6 @@ use App\Repository\Impl\Facility\FacilityRepository;
 
 class FacilityRestController extends ARestController
 {
-    /**
-     * MaterialSubjectconstructor.
-     */
     public function __construct(FacilityRepository $facilityRepository)
     {
         $this->repository = $facilityRepository;

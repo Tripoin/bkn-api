@@ -14,4 +14,8 @@ class ModelAnswerType extends ModelAuditTrails
 {
     protected $table = IApplicationConstant::ANSWER_TYPE_TABLE_NAME;
 
+    protected $fillable = array
+    (
+        IApplicationConstant::ANSWER_CATEGORY_ID
+    );
 }

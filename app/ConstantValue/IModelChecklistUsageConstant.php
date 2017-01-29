@@ -14,4 +14,5 @@ interface IModelChecklistUsageConstant
     const CHECKLIST_USAGE_BOOKING_ID       = 'booking_id';
     const CHECKLIST_USAGE_JSON_CHECKLIST       = 'json_checklist';
     const CHECKLIST_USAGE_IS_LOSS       = 'is_loss';
+    const CHECKLIST_USAGE_USER_MAIN     = 'user_main_id';
 }
