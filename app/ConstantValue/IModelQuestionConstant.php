@@ -31,6 +31,12 @@ interface IModelQuestionConstant
     const MST_QUESTION_TYPE_TABLE   = 'mst_question_type';
 
     /**
+     * mst_question_seleted
+     */
+    const MST_QUESTION_SELECTED_TABLE   = 'mst_question_selected';
+    const QUESTION_SELECTED_QUESTION_ID   = 'question_id';
+    const QUESTION_SELECTED_QUESTIONNAIRE_REVIEW_ID = 'questionnaire_review_id';
+    /**
      * mst_questionnaire
      */
     const MST_QUESTIONNAIRE_TABLE   = 'mst_questionnaire';

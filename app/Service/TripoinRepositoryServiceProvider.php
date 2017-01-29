@@ -47,6 +47,8 @@ use App\Repository\Impl\MaterialSubject\EloquentMaterialSubjectRepository;
 use App\Repository\Impl\MenuGenerator\EloquentRepositoryMenuGenerator;
 use App\Repository\Impl\MaterialSubject\MaterialSubjectRepository;
 use App\Repository\Impl\MenuGenerator\MenuGeneratorRepository;
+use App\Repository\Impl\Notification\EloquentNotificationRepository;
+use App\Repository\Impl\Notification\NotificationRepository;
 use App\Repository\Impl\Province\EloquentRepositoryProvince;
 use App\Repository\Impl\Province\ProvinceRepository;
 
@@ -59,6 +61,8 @@ use App\Repository\Impl\Question\QuestionType\QuestionTypeRepository;
 use App\Repository\Impl\Questionnaire\EloquentRepositoryQuestionnaire;
 use App\Repository\Impl\Questionnaire\QuestionnaireRepository;
 
+use App\Repository\Impl\QuestionSelected\EloquentQuestionSelectedRepository;
+use App\Repository\Impl\QuestionSelected\QuestionSelectedRepository;
 use App\Repository\Impl\Religion\EloquentRepositoryReligion;
 use App\Repository\Impl\Religion\ReligionRepository;
 use App\Repository\Impl\Room\EloquentRepositoryRoom;
@@ -81,6 +85,10 @@ use App\Repository\Impl\Subject\SubjectCategory\EloquentSubjectCategoryRepositor
 use App\Repository\Impl\Subject\SubjectCategory\SubjectCategoryRepository;
 use App\Repository\Impl\Subject\SubjectType\EloquentRepositorySubjectType;
 use App\Repository\Impl\Subject\SubjectType\SubjectTypeRepository;
+use App\Repository\Impl\SystemChoiceAnswer\EloquentSystemChoiceRepository;
+use App\Repository\Impl\SystemChoiceAnswer\SystemChoiceAnswerRepository;
+use App\Repository\Impl\Unit\EloquentUnitRepository;
+use App\Repository\Impl\Unit\UnitRepository;
 use App\Repository\Impl\Village\EloquentRepositoryVillage;
 use App\Repository\Impl\Village\VillageRepository;
 use Illuminate\Support\ServiceProvider;
@@ -123,6 +131,10 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
         $this->app->bind(EvaluationCategoryRepository::class, EloquentRepositoryEvaluationCategory::class);
         $this->app->bind(ReligionRepository::class, EloquentRepositoryReligion::class);
         $this->app->bind(FacilityRepository::class, EloquentFacilityRepository::class);
+        $this->app->bind(UnitRepository::class, EloquentUnitRepository::class);
+        $this->app->bind(NotificationRepository::class, EloquentNotificationRepository::class);
+        $this->app->bind(SystemChoiceAnswerRepository::class, EloquentSystemChoiceRepository::class);
+        $this->app->bind(QuestionSelectedRepository::class, EloquentQuestionSelectedRepository::class);
 
         /*SECURITY*/
         $this->app->bind(UserRepository::class, EloquentRepositoryUser::class);
