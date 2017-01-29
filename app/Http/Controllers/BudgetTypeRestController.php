@@ -15,8 +15,6 @@ use App\Repository\Impl\BudgetType\BudgetTypeRepository;
 
 class BudgetTypeRestController extends ARestController
 {
-
-
     /**
      * BudgetTypeRestController constructor.
      */

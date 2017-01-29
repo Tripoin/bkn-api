@@ -37,7 +37,7 @@ class EloquentRepositoryCity extends ABaseRepository implements CityRepository
             ->where(
             [ 
                 [
-                    IApplicationConstant::CITY_COL_ID_PROVINCE,
+                    IApplicationConstant::CITY_COL_PROVINCE_ID,
                     IApplicationConstant::EQUALS,
                     $p_ID_PROVINCE
                 ],

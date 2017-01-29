@@ -1,9 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: fadhilprm
- * Date: 1/19/17
- * Time: 2:03 AM
+ * User: Dayat
+ * Date: 19/01/2017
+ * Time: 1:21
  */
 
 namespace App\Http\Controllers;
@@ -13,10 +13,11 @@ use App\Http\Controllers\BaseRest\ARestController;
 use App\Models\ModelSubjectCategory;
 use App\Repository\Impl\Subject\SubjectCategory\SubjectCategoryRepository;
 
-class SubjectCategoryRestController extends  ARestController
+class SubjectCategoryRestController extends ARestController
 {
+
     /**
-     * SubjectTypeRestController constructor.
+     * SubjectCategoryRestController constructor.
      */
     public function __construct(SubjectCategoryRepository $subjectCategoryRepository)
     {

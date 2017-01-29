@@ -27,6 +27,7 @@ class ModelChecklistUsage extends ModelAuditTrails
         IApplicationConstant::CHECKLIST_USAGE_BOOKING_ID,
         IApplicationConstant::CHECKLIST_USAGE_IS_LOSS,
         IApplicationConstant::CHECKLIST_USAGE_JSON_CHECKLIST,
+        IApplicationConstant::CHECKLIST_USAGE_USER_MAIN
     );
 
 }

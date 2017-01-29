@@ -42,6 +42,7 @@ interface IApplicationConstant extends
     IModelGovermentAgencyConstant,
     IModelGuestConstant,
     IModelLevelAkdConstant,
+    IModelLevelQuestionnaireConstant,
     IModelMaterialConstant,
     IModelNotificationConstant,
     IModelOrganizerConstant,

@@ -15,13 +15,12 @@ class ModelContact extends ModelAuditTrails
 {
     protected $table    = IApplicationConstant::CONTACT_TABLE_NAME;
 
-
     protected $fillable = array
     (
-        IApplicationConstant::EMAIL1,
-        IApplicationConstant::EMAIL2,
-        IApplicationConstant::PHONE_NUMBER1,
-        IApplicationConstant::PHONE_NUMBER2,
-        IApplicationConstant::FAX
+        IApplicationConstant::CONTACT_EMAIL1,
+        IApplicationConstant::CONTACT_EMAIL2,
+        IApplicationConstant::CONTACT_PHONE_NUMBER1,
+        IApplicationConstant::CONTACT_PHONE_NUMBER2,
+        IApplicationConstant::CONTACT_FAX
     );
 }

@@ -16,15 +16,6 @@ class ModelAddress extends ModelAuditTrails
 
     protected $fillable = array
     (
-        IApplicationConstant::ID,
-        IApplicationConstant::CODE,
-        IApplicationConstant::NAME,
-        IApplicationConstant::DESCRIPTION,
-        IApplicationConstant::STATUS,
-        IApplicationConstant::CREATED_BY,
-        IApplicationConstant::CREATED_ON,
-        IApplicationConstant::MODIFIED_BY,
-        IApplicationConstant::MODIFIED_ON,
         IApplicationConstant::ADDRESS_COL_PROVINCE_ID,
         IApplicationConstant::ADDRESS_COL_CITY_ID,
         IApplicationConstant::ADDRESS_COL_DISTRICT_ID,

@@ -14,6 +14,13 @@ use App\Repository\Impl\SecurityUser\UserRepository;
 
 class EloquentRepositoryBudgetType extends ABaseRepository implements BudgetTypeRepository
 {
+    /**
+     * EloquentRepositoryBudgetType constructor.
+     */
+    public function __construct(UserRepository $userRepository)
+    {
+        parent::__construct($userRepository);
+    }
 
     /**
      * EloquentRepositoryVillage constructor.
