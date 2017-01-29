@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @project pip-rest.
+ * @project bkn-api.
  * @since 8/23/2016 6:43 PM
  * @author <a href = "fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
@@ -39,6 +39,8 @@ use App\Repository\Impl\Evaluation\EvaluationRepository;
 use App\Repository\Impl\EvaluationAssess\EvaluationAssessRepository;
 use App\Repository\Impl\EvaluationCategory\EloquentRepositoryEvaluationCategory;
 use App\Repository\Impl\EvaluationCategory\EvaluationCategoryRepository;
+use App\Repository\Impl\Facility\EloquentFacilityRepository;
+use App\Repository\Impl\Facility\FacilityRepository;
 use App\Repository\Impl\LevelAkd\EloquentRepositoryLevelAkd;
 use App\Repository\Impl\LevelAkd\LevelAkdRepository;
 use App\Repository\Impl\MaterialSubject\EloquentMaterialSubjectRepository;
@@ -59,6 +61,8 @@ use App\Repository\Impl\Questionnaire\QuestionnaireRepository;
 
 use App\Repository\Impl\Registration\EloquentRepositoryRegistration;
 use App\Repository\Impl\Registration\RegistrationRepository;
+use App\Repository\Impl\Religion\EloquentRepositoryReligion;
+use App\Repository\Impl\Religion\ReligionRepository;
 use App\Repository\Impl\Room\EloquentRepositoryRoom;
 use App\Repository\Impl\Room\RoomRepository;
 
@@ -75,6 +79,8 @@ use App\Repository\Impl\SecurityGroup\SecurityUserProfileRepository;
 use App\Repository\Impl\SecurityUser\EloquentRepositoryUser;
 use App\Repository\Impl\SecurityUser\UserRepository;
 
+use App\Repository\Impl\Subject\SubjectCategory\EloquentSubjectCategoryRepository;
+use App\Repository\Impl\Subject\SubjectCategory\SubjectCategoryRepository;
 use App\Repository\Impl\Subject\SubjectType\EloquentRepositorySubjectType;
 use App\Repository\Impl\Subject\SubjectType\SubjectTypeRepository;
 use App\Repository\Impl\Village\EloquentRepositoryVillage;
@@ -101,6 +107,7 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
         $this->app->bind(QuestionnaireRepository::class, EloquentRepositoryQuestionnaire::class);
         $this->app->bind(LevelAkdRepository::class, EloquentRepositoryLevelAkd::class);
         $this->app->bind(SubjectTypeRepository::class, EloquentRepositorySubjectType::class);
+        $this->app->bind(SubjectCategoryRepository::class, EloquentSubjectCategoryRepository::class);
 		$this->app->bind(ProvinceRepository::class, EloquentRepositoryProvince::class);
         $this->app->bind(BudgetTypeRepository::class, EloquentRepositoryBudgetType::class);
         $this->app->bind(CertificateRepository::class, EloquentRepositoryCertificate::class);
@@ -116,6 +123,8 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
         $this->app->bind(EvaluationRepository::class, EloquentRepositoryEvaluation::class);
         $this->app->bind(EvaluationAssessRepository::class, EloquentRepositoryEvaluationAssess::class);
         $this->app->bind(EvaluationCategoryRepository::class, EloquentRepositoryEvaluationCategory::class);
+        $this->app->bind(ReligionRepository::class, EloquentRepositoryReligion::class);
+        $this->app->bind(FacilityRepository::class, EloquentFacilityRepository::class);
 
         /*SECURITY*/
         $this->app->bind(UserRepository::class, EloquentRepositoryUser::class);

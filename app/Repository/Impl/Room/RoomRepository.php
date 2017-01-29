@@ -5,7 +5,7 @@
  * @author <a href ="mailto:fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
-namespace app\Repository\Impl\Room;
+namespace App\Repository\Impl\Room;
 
 
 use App\Repository\IGenericRepository;

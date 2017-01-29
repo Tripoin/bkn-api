@@ -214,6 +214,24 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::get('command=100012', 'RoomRestController@selectLOV');
                 Route::get('command=100013', 'RoomRestController@all');
             });
+
+            /**
+             * Religion
+             */
+            Route::group(['prefix' => '130021'], function ()
+            {
+                Route::get('command=100003', 'ReligionRestController@all');
+                Route::post('command=100004', 'ReligionRestController@insert');
+                Route::put('command=100005', 'ReligionRestController@update');
+                Route::delete('command=100006', 'ReligionRestController@delete');
+                Route::post('command=100007', 'ReligionRestController@findById');
+                Route::post('command=100008', 'ReligionRestController@findByCode');
+                Route::post('command=100009', 'ReligionRestController@findByName');
+                Route::post('command=100010', 'ReligionRestController@advancedPagination');
+                Route::post('command=100011', 'ReligionRestController@simplePagination');
+                Route::get('command=100012', 'ReligionRestController@selectLOV');
+                Route::get('command=100013', 'ReligionRestController@all');
+            });
             /**
              * question
              */
@@ -470,6 +488,23 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::post('command=100010', 'EvaluationAssessRestController@advancedPagination');
                 Route::post('command=100011', 'EvaluationAssessRestController@simplePagination');
                 Route::get('command=100012', 'EvaluationAssessRestController@selectLOV');
+            });
+
+            /**
+             * Facility
+             */
+            Route::group(['prefix' => '130058'], function ()
+            {
+                Route::get('command=100003', 'FacilityRestController@all');
+                Route::post('command=100004', 'FacilityRestController@insert');
+                Route::put('command=100005', 'FacilityRestController@update');
+                Route::delete('command=100006', 'FacilityRestController@delete');
+                Route::post('command=100007', 'FacilityRestController@findById');
+                Route::post('command=100008', 'FacilityRestController@findByCode');
+                Route::post('command=100009', 'FacilityRestController@findByName');
+                Route::post('command=100010', 'FacilityRestController@advancedPagination');
+                Route::post('command=100011', 'FacilityRestController@simplePagination');
+                Route::get('command=100012', 'FacilityRestController@selectLOV');
             });
         });
 

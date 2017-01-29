@@ -15,16 +15,11 @@ interface IModelSubjectConstant
      * mst_subject
      */
     const MST_SUBJECT_TABLE         = 'mst_subject';
-    const SUBJECT_DURATION          = 'duration';
-    const SUBJECT_UNIT_ID           = 'unit_id';
-    const SUBJECT_AMOUNT            = 'subject_amount';
     const BUDGET_TYPE_ID            = 'budget_type_id';
+    const SUBJECT_AMOUNT            = 'subject_amount';
     const SUBJECT_LOCATION          = 'location';
-    const START_SUBJECT             = 'start_subject';
-    const END_SUBJECT               = 'end_subject';
     const SUBJECT_NECESSARY_DESC    = 'necessary_description';
-    const SUBJECT_TYPE_ID           = 'subject_type_id';
-
+    const SUBJECT_PARENT_ID         = 'parent_id';
     /**
      * mst_subject_category
      */

@@ -11,7 +11,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\BaseRest\ARestController;
 use App\Models\ModelCertificate;
 use App\Models\ModelRoom;
-use app\Repository\Impl\Room\RoomRepository;
+use App\Repository\Impl\Room\RoomRepository;
 
 class RoomRestController extends ARestController
 {
