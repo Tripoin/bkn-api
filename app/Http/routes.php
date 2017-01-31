@@ -265,20 +265,20 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::get('command=100012', 'QuestionnaireRestController@selectLOV');
             });
             /**
-             * level akd
+             * level questionnaire
              */
             Route::group(['prefix' => '130023'], function()
             {
-                Route::get('command=100003', 'LevelAkdRestController@all');
-                Route::post('command=100004', 'LevelAkdRestController@insert');
-                Route::put('command=100005', 'LevelAkdRestController@update');
-                Route::delete('command=100006', 'LevelAkdRestController@delete');
-                Route::post('command=100007', 'LevelAkdRestController@findById');
-                Route::post('command=100008', 'LevelAkdRestController@findByCode');
-                Route::post('command=100009', 'LevelAkdRestController@findByName');
-                Route::post('command=100010', 'LevelAkdRestController@advancedPagination');
-                Route::post('command=100011', 'LevelAkdRestController@simplePagination');
-                Route::get('command=100012', 'LevelAkdRestController@selectLOV');
+                Route::get('command=100003', 'LevelQuestionnaireRestController@all');
+                Route::post('command=100004', 'LevelQuestionnaireRestController@insert');
+                Route::put('command=100005', 'LevelQuestionnaireRestController@update');
+                Route::delete('command=100006', 'LevelQuestionnaireRestController@delete');
+                Route::post('command=100007', 'LevelQuestionnaireRestController@findById');
+                Route::post('command=100008', 'LevelQuestionnaireRestController@findByCode');
+                Route::post('command=100009', 'LevelQuestionnaireRestController@findByName');
+                Route::post('command=100010', 'LevelQuestionnaireRestController@advancedPagination');
+                Route::post('command=100011', 'LevelQuestionnaireRestController@simplePagination');
+                Route::get('command=100012', 'LevelQuestionnaireRestController@selectLOV');
             });
             /**
              * subject type
@@ -330,20 +330,20 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::get('command=100012', 'UnitRestController@selectLOV');
             });
             /**
-             * MaterialSubject
+             * Subject
              */
             Route::group(['prefix' => '130008'], function ()
             {
-                Route::get('command=100003', 'MaterialSubjectRestController@all');
-                Route::post('command=100004', 'MaterialSubjectRestController@insert');
-                Route::put('command=100005', 'MaterialSubjectRestController@update');
-                Route::delete('command=100006', 'MaterialSubjectRestController@delete');
-                Route::post('command=100007', 'MaterialSubjectRestController@findById');
-                Route::post('command=100008', 'MaterialSubjectRestController@findByCode');
-                Route::post('command=100009', 'MaterialSubjectRestController@findByName');
-                Route::post('command=100010', 'MaterialSubjectRestController@advancedPagination');
-                Route::post('command=100011', 'MaterialSubjectRestController@simplePagination');
-                Route::get('command=100012', 'MaterialSubjectRestController@selectLOV');
+                Route::get('command=100003', 'SubjectRestController@all');
+                Route::post('command=100004', 'SubjectRestController@insert');
+                Route::put('command=100005', 'SubjectRestController@update');
+                Route::delete('command=100006', 'SubjectRestController@delete');
+                Route::post('command=100007', 'SubjectRestController@findById');
+                Route::post('command=100008', 'SubjectRestController@findByCode');
+                Route::post('command=100009', 'SubjectRestController@findByName');
+                Route::post('command=100010', 'SubjectRestController@advancedPagination');
+                Route::post('command=100011', 'SubjectRestController@simplePagination');
+                Route::get('command=100012', 'SubjectRestController@selectLOV');
             });
 
             /**
