@@ -45,4 +45,12 @@ interface IModelQuestionConstant
     const QUESTIONNAIRE_END         = 'questionnaire_end';
     const QUESTIONNAIRE_YEAR        = 'questionnaire_year';
     const QUESTIONNAIRE_JSON_REVIEW = 'json_review';
+    /**
+     * mst_questionnaire_review
+     */
+    const MST_QUESTIONNAIRE_REVIEW_TABLE   = 'mst_questionnaire_review';
+    const QUESTIONNAIRE_REVIEW_START       = 'questionnaire_start';
+    const QUESTIONNAIRE_REVIEW_END         = 'questionnaire_end';
+    const QUESTIONNAIRE_REVIEW_YEAR        = 'questionnaire_year';
+    const QUESTIONNAIRE_REVIEW_JSON_REVIEW = 'json_review';
 }
