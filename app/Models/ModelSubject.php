@@ -22,6 +22,5 @@ class ModelSubject extends ModelAuditTrails
         IApplicationConstant::SUBJECT_LOCATION,
         IApplicationConstant::SUBJECT_NECESSARY_DESC,
         IApplicationConstant::SUBJECT_PARENT_ID,
-
     );
 }

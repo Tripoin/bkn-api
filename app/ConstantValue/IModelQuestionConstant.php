@@ -31,6 +31,12 @@ interface IModelQuestionConstant
     const MST_QUESTION_TYPE_TABLE   = 'mst_question_type';
 
     /**
+     * mst_question_seleted
+     */
+    const MST_QUESTION_SELECTED_TABLE   = 'mst_question_selected';
+    const QUESTION_SELECTED_QUESTION_ID   = 'question_id';
+    const QUESTION_SELECTED_QUESTIONNAIRE_REVIEW_ID = 'questionnaire_review_id';
+    /**
      * mst_questionnaire
      */
     const MST_QUESTIONNAIRE_TABLE   = 'mst_questionnaire';
@@ -39,4 +45,12 @@ interface IModelQuestionConstant
     const QUESTIONNAIRE_END         = 'questionnaire_end';
     const QUESTIONNAIRE_YEAR        = 'questionnaire_year';
     const QUESTIONNAIRE_JSON_REVIEW = 'json_review';
+    /**
+     * mst_questionnaire_review
+     */
+    const MST_QUESTIONNAIRE_REVIEW_TABLE   = 'mst_questionnaire_review';
+    const QUESTIONNAIRE_REVIEW_START       = 'questionnaire_start';
+    const QUESTIONNAIRE_REVIEW_END         = 'questionnaire_end';
+    const QUESTIONNAIRE_REVIEW_YEAR        = 'questionnaire_year';
+    const QUESTIONNAIRE_REVIEW_JSON_REVIEW = 'json_review';
 }

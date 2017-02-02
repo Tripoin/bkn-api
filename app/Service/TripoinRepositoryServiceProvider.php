@@ -31,6 +31,8 @@ use App\Repository\Impl\Contact\ContactRepository;
 use App\Repository\Impl\Contact\EloquentRepositoryContact;
 use App\Repository\Impl\ContactMessage\ContactMessageRepository;
 use App\Repository\Impl\ContactMessage\EloquentRepositoryContactMessage;
+use App\Repository\Impl\Curriculum\CurriculumRepository;
+use App\Repository\Impl\Curriculum\EloquentCurriculumRepository;
 use App\Repository\Impl\District\DistrictRepository;
 use App\Repository\Impl\District\EloquentRepositoryDistrict;
 
@@ -47,6 +49,8 @@ use App\Repository\Impl\MaterialSubject\EloquentMaterialSubjectRepository;
 use App\Repository\Impl\MenuGenerator\EloquentRepositoryMenuGenerator;
 use App\Repository\Impl\MaterialSubject\MaterialSubjectRepository;
 use App\Repository\Impl\MenuGenerator\MenuGeneratorRepository;
+use App\Repository\Impl\Notification\EloquentNotificationRepository;
+use App\Repository\Impl\Notification\NotificationRepository;
 use App\Repository\Impl\Province\EloquentRepositoryProvince;
 use App\Repository\Impl\Province\ProvinceRepository;
 
@@ -58,6 +62,11 @@ use App\Repository\Impl\Question\QuestionType\EloquentRepositoryQuestionType;
 use App\Repository\Impl\Question\QuestionType\QuestionTypeRepository;
 use App\Repository\Impl\Questionnaire\EloquentRepositoryQuestionnaire;
 use App\Repository\Impl\Questionnaire\QuestionnaireRepository;
+
+use App\Repository\Impl\QuestionnaireReview\EloquentQuestionnaireReviewRepository;
+use App\Repository\Impl\QuestionnaireReview\QuestionnaireReviewRepository;
+use App\Repository\Impl\QuestionSelected\EloquentQuestionSelectedRepository;
+use App\Repository\Impl\QuestionSelected\QuestionSelectedRepository;
 
 use App\Repository\Impl\Registration\EloquentRepositoryRegistration;
 use App\Repository\Impl\Registration\RegistrationRepository;
@@ -81,12 +90,22 @@ use App\Repository\Impl\SecurityGroup\SecurityUserProfileRepository;
 use App\Repository\Impl\SecurityUser\EloquentRepositoryUser;
 use App\Repository\Impl\SecurityUser\UserRepository;
 
+use App\Repository\Impl\StudyProgram\EloquentStudyProgramRepository;
+use App\Repository\Impl\StudyProgram\StudyProgramRepository;
 use App\Repository\Impl\Subject\SubjectCategory\EloquentSubjectCategoryRepository;
 use App\Repository\Impl\Subject\SubjectCategory\SubjectCategoryRepository;
+use App\Repository\Impl\Subject\SubjectRequirements\EloquentRepositorySubjectRequirements;
+use App\Repository\Impl\Subject\SubjectRequirements\SubjectRequirementsRepository;
 use App\Repository\Impl\Subject\SubjectType\EloquentRepositorySubjectType;
 use App\Repository\Impl\Subject\SubjectType\SubjectTypeRepository;
+use App\Repository\Impl\SystemChoiceAnswer\EloquentSystemChoiceRepository;
+use App\Repository\Impl\SystemChoiceAnswer\SystemChoiceAnswerRepository;
+use App\Repository\Impl\Unit\EloquentUnitRepository;
+use App\Repository\Impl\Unit\UnitRepository;
 use App\Repository\Impl\Village\EloquentRepositoryVillage;
 use App\Repository\Impl\Village\VillageRepository;
+use App\Repository\Impl\WorkingUnit\EloquentWorkingUnitRepository;
+use App\Repository\Impl\WorkingUnit\WorkingUnitRepository;
 use App\Service\Registration\IRegistrationService;
 use App\Service\Registration\RegistrationServiceImpl;
 use app\Service\RegistrationDetails\IRegistrationDetailsService;
@@ -137,7 +156,16 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
         $this->app->bind(EvaluationCategoryRepository::class, EloquentRepositoryEvaluationCategory::class);
         $this->app->bind(ReligionRepository::class, EloquentRepositoryReligion::class);
         $this->app->bind(FacilityRepository::class, EloquentFacilityRepository::class);
-
+        $this->app->bind(UnitRepository::class, EloquentUnitRepository::class);
+        $this->app->bind(NotificationRepository::class, EloquentNotificationRepository::class);
+        $this->app->bind(SystemChoiceAnswerRepository::class, EloquentSystemChoiceRepository::class);
+        $this->app->bind(QuestionSelectedRepository::class, EloquentQuestionSelectedRepository::class);
+        $this->app->bind(MaterialSubjectRepository::class, EloquentMaterialSubjectRepository::class);
+        $this->app->bind(StudyProgramRepository::class, EloquentStudyProgramRepository::class);
+        $this->app->bind(CurriculumRepository::class, EloquentCurriculumRepository::class);
+        $this->app->bind(QuestionnaireReviewRepository::class, EloquentQuestionnaireReviewRepository::class);
+        $this->app->bind(WorkingUnitRepository::class, EloquentWorkingUnitRepository::class);
+        $this->app->bind(SubjectRequirementsRepository::class, EloquentRepositorySubjectRequirements::class);
         /*SECURITY*/
         $this->app->bind(UserRepository::class, EloquentRepositoryUser::class);
         
@@ -147,7 +175,7 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
         $this->app->bind(SecurityBranchRepository::class, EloquentRepositorySecurityBranch::class);
         $this->app->bind(SecurityUserProfileRepository::class, EloquentRepositorySecurityUserProfile::class);
         $this->app->bind(MenuGeneratorRepository::class, EloquentRepositoryMenuGenerator::class);
-        $this->app->bind(MaterialSubjectRepository::class, EloquentMaterialSubjectRepository::class);
+
 
         /*TRANSACTION*/
         $this->app->bind(RegistrationRepository::class, EloquentRepositoryRegistration::class);

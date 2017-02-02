@@ -1,9 +1,8 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Dayat
- * Date: 19/01/2017
- * Time: 20:02
+ * @project pip-rest.
+ * @since 8/23/2016 4:06 PM
+ * @author <a href = "fauzi.knightmaster.achmad@gmail.com">Achmad Fauzi</a>
  */
 
 namespace App\Models;
@@ -13,5 +12,6 @@ use App\ConstantValue\IApplicationConstant;
 
 class ModelEvaluationCategory extends ModelAuditTrails
 {
-    protected $table = IApplicationConstant::MST_EVALUATION_CATEGORY_TABLE;
+    protected $table = IApplicationConstant::EVALUATION_CATEGORY_TABLE_NAME;
+
 }

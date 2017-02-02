@@ -11,10 +11,9 @@ namespace App\Http\Controllers\Transaction;
 
 use App\Http\Controllers\BaseRest\ARestController;
 use App\Models\ModelReligion;
-use App\Repository\Impl\ABaseRepository;
 use App\Repository\Impl\Religion\ReligionRepository;
 
-class ReligionRestRepositoryARestController extends ARestController
+class ReligionRestController extends ARestController
 {
 
     public function __construct(ReligionRepository $religionRepository)

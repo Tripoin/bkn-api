@@ -69,6 +69,10 @@ interface IApplicationConstant extends
     IModelSecurityUserConstant,
     IViewConstant,
     IModelRoomConstant,
+    IModelStudyProgramConstant,
+    IModelSupportRoomConstant,
+    IModelWorkingUnitConstant,
+    IModelCurriculumConstant,
     IValidationConstant {
     const APPLICATION_CRYPT = "PIP-Dev!23TelkomS1gma";
 }

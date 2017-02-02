@@ -21,7 +21,7 @@ class ModelQuestion extends ModelAuditTrails
         IApplicationConstant::QUESTION_CATEGORY_ID,
         IApplicationConstant::QUESTION_DETAILS,
         IApplicationConstant::JSON_QUESTION,
-        IApplicationConstant::ANSWER_CATEGORY_ID
+        IApplicationConstant::QUESTION_ANSWER_CATEGORY_ID
 
 
     );
