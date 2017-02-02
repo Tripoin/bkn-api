@@ -58,4 +58,50 @@ class RegistrationRestController extends ARestController
             }
         }
     }
+
+    public function approve(){
+        $dataApproval = (object)Request::json()->all();
+        if (is_null($dataApproval)){
+            return $this->restUtil->responseNoContent();
+        }else{
+            try{
+                $dataApproval = $this->classCaster->cast(get_class($this->getModel()), $dataApproval);
+                try{
+                    if ($this->registrationService->approveRegistration($dataApproval) == 0){
+                        return $this->restUtil->responseSuccessUpdate();
+                    }else{
+                        return $this->restUtil->responseErrorUpdate();
+                    }
+                }catch (\Exception $e){
+                    Log::error('Approve Registration failed '.$e->getMessage());
+                    return $this->restUtil->responseErrorUpdate();
+                }
+            }catch (\Exception $e){
+                return $this->restUtil->responseInvalidJSONFormat();
+            }
+        }
+    }
+
+    public function decline(){
+        $dataDecline = (object)Request::json()->all();
+        if (is_null($dataDecline)){
+            return $this->restUtil->responseNoContent();
+        }else{
+            try{
+                $dataDecline = $this->classCaster->cast(get_class($this->getModel()), $dataDecline);
+                try{
+                    if ($this->registrationService->declineRegistration($dataDecline) == 0){
+                        return $this->restUtil->responseSuccessUpdate();
+                    }else{
+                        return $this->restUtil->responseErrorUpdate();
+                    }
+                }catch (\Exception $e){
+                    Log::error('Approve Registration failed '.$e->getMessage());
+                    return $this->restUtil->responseErrorUpdate();
+                }
+            }catch (\Exception $e){
+                return $this->restUtil->responseInvalidJSONFormat();
+            }
+        }
+    }
 }

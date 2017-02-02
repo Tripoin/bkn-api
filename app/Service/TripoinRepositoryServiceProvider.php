@@ -61,6 +61,8 @@ use App\Repository\Impl\Questionnaire\QuestionnaireRepository;
 
 use App\Repository\Impl\Registration\EloquentRepositoryRegistration;
 use App\Repository\Impl\Registration\RegistrationRepository;
+use App\Repository\Impl\RegistrationDetails\EloquentRepositoryRegistrationDetails;
+use App\Repository\Impl\RegistrationDetails\RegistrationDetailsRepository;
 use App\Repository\Impl\Religion\EloquentRepositoryReligion;
 use App\Repository\Impl\Religion\ReligionRepository;
 use App\Repository\Impl\Room\EloquentRepositoryRoom;
@@ -87,6 +89,10 @@ use App\Repository\Impl\Village\EloquentRepositoryVillage;
 use App\Repository\Impl\Village\VillageRepository;
 use App\Service\Registration\IRegistrationService;
 use App\Service\Registration\RegistrationServiceImpl;
+use app\Service\RegistrationDetails\IRegistrationDetailsService;
+use app\Service\RegistrationDetails\RegistrationDetailsServiceImpl;
+use app\Service\UserAssignment\IUserAssignmentService;
+use app\Service\UserAssignment\UserAssignmentServiceImpl;
 use Illuminate\Support\ServiceProvider;
 
 class TripoinRepositoryServiceProvider extends ServiceProvider
@@ -100,7 +106,7 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
     public function register()
     {
         /**
-         * Binding REPOSITORY
+         * BINDING REPOSITORY
          */
         /*====================================================START REPO BINDING=================================================*/
         /*MDA*/
@@ -145,6 +151,7 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
 
         /*TRANSACTION*/
         $this->app->bind(RegistrationRepository::class, EloquentRepositoryRegistration::class);
+        $this->app->bind(RegistrationDetailsRepository::class, EloquentRepositoryRegistrationDetails::class);
         /*====================================================END REPO BINDING=================================================*/
 
         /**
@@ -152,5 +159,7 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
          */
         /*TRANSACTION*/
         $this->app->bind(IRegistrationService::class, RegistrationServiceImpl::class);
+        $this->app->bind(IRegistrationDetailsService::class, RegistrationDetailsServiceImpl::class);
+        $this->app->bind(IUserAssignmentService::class, UserAssignmentServiceImpl::class);
     }
 }

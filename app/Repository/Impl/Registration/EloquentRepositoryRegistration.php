@@ -34,15 +34,50 @@ class EloquentRepositoryRegistration extends ABaseRepository implements Registra
     {
         if (is_null($dataRegistration)){
             return -1;
-            Log::error("data reg null");
         }
         try{
             DB::beginTransaction();
-            Log::error("start transac");
             $dataRegistration->user_id = $this->userRepository->getUserLoggedIn()->id;
             parent::insert($dataRegistration);
             DB::commit();
-            Log::error("done transac");
+            return 0;
+        }catch (\Exception $e){
+            DB::rollback();
+            Log::error($e->getTraceAsString());
+            return -1;
+        }
+    }
+
+    public function approve($idRegistration)
+    {
+        if (is_null($idRegistration)){
+            return -1;
+        }
+        try{
+            DB::beginTransaction();
+            $dataRegistration = $this->findById($idRegistration);
+            $dataRegistration->is_approve = 1;
+            parent::update($dataRegistration);
+            DB::commit();
+            return 0;
+        }catch (\Exception $e){
+            DB::rollback();
+            Log::error($e->getTraceAsString());
+            return -1;
+        }
+    }
+
+    public function decline($idRegistration)
+    {
+        if (is_null($idRegistration)){
+            return -1;
+        }
+        try{
+            DB::beginTransaction();
+            $dataRegistration = $this->findById($idRegistration);
+            $dataRegistration->is_approve = 0;
+            parent::update($dataRegistration);
+            DB::commit();
             return 0;
         }catch (\Exception $e){
             DB::rollback();

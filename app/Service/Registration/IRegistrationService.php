@@ -18,4 +18,8 @@ interface IRegistrationService extends ITripoinService
      * @return mixed -1 : failed , 0 : failed
      */
     public function register($dataRegistration);
+
+    public function approveRegistration($idRegistration);
+
+    public function declineRegistration($idRegistration);
 }

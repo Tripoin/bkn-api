@@ -19,4 +19,8 @@ interface RegistrationRepository extends IGenericRepository
      * @return mixed -1 : failed, 0 success
      */
     public function register($dataRegistration);
+
+    public function approve($idRegistration);
+
+    public function decline($idRegistration);
 }

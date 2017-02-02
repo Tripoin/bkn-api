@@ -39,6 +39,8 @@ interface IApplicationConstant extends
     IModelDocumentationConstant,
     IModelFacilityConstant,
     IModelRegistrationConstant,
+    IModelRegistrationDetailsConstant,
+    IModelUserAssignment,
     IModelGovermentAgencyConstant,
     IModelGuestConstant,
     IModelLevelAkdConstant,

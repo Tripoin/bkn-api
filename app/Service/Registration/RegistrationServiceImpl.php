@@ -18,4 +18,14 @@ class RegistrationServiceImpl extends ATripoinService implements IRegistrationSe
     {
         $this->repository->register($dataRegistration);
     }
+
+    public function approveRegistration($idRegistration)
+    {
+        $this->repository->approve($idRegistration);
+    }
+
+    public function declineRegistration($idRegistration)
+    {
+        $this->repository->decline($idRegistration);
+    }
 }

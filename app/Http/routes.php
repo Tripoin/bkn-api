@@ -131,7 +131,7 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::get('command=100012', 'VillageRestController@selectLOV');
             });
 
-			/**
+            /**
              * Documentation
              */
             Route::group(['prefix' => '130006'], function ()
@@ -147,7 +147,7 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::post('command=100011', 'ProvinceRestController@simplePagination');
                 Route::get('command=100012', 'ProvinceRestController@selectLOV');
             });
-			
+
             /**
              * Certificate
              */
@@ -605,11 +605,61 @@ Route::group(['prefix' => '000000/1/'], function ()
             Route::group(['prefix' => '200004'], function ()
             {
                 /**
-                 * Register Participant REST
+                 * Register Participant
                  */
                 Route::post('command=100004', 'RegistrationRestController@register');
+                /**
+                 * Approve Registration
+                 */
+                Route::post('command=100005', 'RegistrationRestController@approve');
+                /**
+                 * Decline Registration
+                 */
+                Route::post('command=100006', 'RegistrationRestController@decline');
+            });
+
+
+            /**
+             * Registration Details
+             */
+            Route::group(['prefix' => '200005'], function ()
+            {
+                /**
+                 * Register Detail Single
+                 */
+                Route::post('command=100004', 'RegistrationDetailsRestController@singleRegistrationDetails');
+                /**
+                 * Register Detail Bulk
+                 */
+                Route::post('command=100005', 'RegistrationDetailsRestController@bulkRegistrationDetails');
+                /**
+                 * Approve Detail Single
+                 */
+                Route::post('command=100006', 'RegistrationDetailsRestController@approveRegistrationDetails');
+                /**
+                 * Approve Detail Bulk
+                 */
+                Route::post('command=100007', 'RegistrationDetailsRestController@approveBulkRegistrationDetails');
+                /**
+                 * Decline Detail Single
+                 */
+                Route::post('command=100008', 'RegistrationDetailsRestController@declineRegistrationDetails');
+                /**
+                 * Decline Detail Bulk
+                 */
+                Route::post('command=100009', 'RegistrationDetailsRestController@declineBulkRegistrationDetails');
             });
         });
 
+        /**
+         * User Assignment
+         */
+        Route::group(['prefix' => '130058'], function ()
+        {
+            /**
+             * Make Assignment
+             */
+            Route::post('command=100004', 'UserAssignmentRestController@makeAssignment');
+        });
     });
 });
