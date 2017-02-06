@@ -29,6 +29,7 @@ interface IApplicationConstant extends
     IModelAnswerTypeConstant,
     IModelAssignmentLetterConstant,
     IModelAttachmentConstant,
+    IModelCategoryAssess,
     IModelCalcQuestionnaireConstant,
     IModelChecklistUsageConstant,
     IModelEvaluationConstant,

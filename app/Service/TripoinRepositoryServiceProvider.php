@@ -23,6 +23,8 @@ use App\Repository\Impl\BudgetType\BudgetTypeRepository;
 use App\Repository\Impl\BudgetType\EloquentRepositoryBudgetType;
 use App\Repository\Impl\CalcQuestionnaire\CalcQuestionnaireRepository;
 use App\Repository\Impl\CalcQuestionnaire\EloquentRepositoryCalcQuestionnaire;
+use App\Repository\Impl\CategoryAssess\CategoryAssessRepository;
+use App\Repository\Impl\CategoryAssess\EloquentRepositoryCategoryAssess;
 use App\Repository\Impl\Certificate\CertificateRepository;
 use App\Repository\Impl\Certificate\EloquentRepositoryCertificate;
 use App\Repository\Impl\City\EloquentRepositoryCity;
@@ -166,6 +168,7 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
         $this->app->bind(QuestionnaireReviewRepository::class, EloquentQuestionnaireReviewRepository::class);
         $this->app->bind(WorkingUnitRepository::class, EloquentWorkingUnitRepository::class);
         $this->app->bind(SubjectRequirementsRepository::class, EloquentRepositorySubjectRequirements::class);
+        $this->app->bind(CategoryAssessRepository::class, EloquentRepositoryCategoryAssess::class);
         /*SECURITY*/
         $this->app->bind(UserRepository::class, EloquentRepositoryUser::class);
         

@@ -753,6 +753,23 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::post('command=100011', 'QuestionnaireReviewRestController@simplePagination');
                 Route::get('command=100012', 'QuestionnaireReviewRestController@selectLOV');
             });
+
+            /**
+             * Category Assessment
+             */
+            Route::group(['prefix' => '130063'], function ()
+            {
+                Route::get('command=100003', 'CategoryAssessRestController@all');
+                Route::post('command=100004', 'CategoryAssessRestController@insert');
+                Route::put('command=100005', 'CategoryAssessRestController@update');
+                Route::delete('command=100006', 'CategoryAssessRestController@delete');
+                Route::post('command=100007', 'CategoryAssessRestController@findById');
+                Route::post('command=100008', 'CategoryAssessRestController@findByCode');
+                Route::post('command=100009', 'CategoryAssessRestController@findByName');
+                Route::post('command=100010', 'CategoryAssessRestController@getCategoryWithParent');
+                Route::post('command=100011', 'CategoryAssessRestController@simplePagination');
+                Route::get('command=100012', 'CategoryAssessRestController@selectLOV');
+            });
         });
 
         /**
