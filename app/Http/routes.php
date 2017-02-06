@@ -770,6 +770,23 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::post('command=100011', 'CategoryAssessRestController@simplePagination');
                 Route::get('command=100012', 'CategoryAssessRestController@selectLOV');
             });
+            /**
+             * Support Room
+             */
+            Route::group(['prefix' => '130065'], function ()
+            {
+                Route::get('command=100003', 'SupportRoomRestController@all');
+                Route::post('command=100004', 'SupportRoomRestController@insert');
+                Route::put('command=100005', 'SupportRoomRestController@update');
+                Route::delete('command=100006', 'SupportRoomRestController@delete');
+                Route::post('command=100007', 'SupportRoomRestController@findById');
+                Route::post('command=100008', 'SupportRoomRestController@findByCode');
+                Route::post('command=100009', 'SupportRoomRestController@findByName');
+                Route::post('command=100010', 'SupportRoomRestController@getCategoryWithParent');
+                Route::post('command=100011', 'SupportRoomRestController@simplePagination');
+                Route::get('command=100012', 'SupportRoomRestController@selectLOV');
+            });
+
         });
 
         /**
