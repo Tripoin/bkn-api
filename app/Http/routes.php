@@ -610,7 +610,7 @@ Route::group(['prefix' => '000000/1/'], function ()
                 Route::post('command=100007', 'AnswerTypeRestController@findById');
                 Route::post('command=100008', 'AnswerTypeRestController@findByCode');
                 Route::post('command=100009', 'AnswerTypeRestController@findByName');
-                Route::post('command=100010', 'AnswerTypeRestController@advancedPagination');
+                Route::post('command=100010', 'AnswerTypeRestController@getDataAnswerCategory');
                 Route::post('command=100011', 'AnswerTypeRestController@simplePagination');
                 Route::get('command=100012', 'AnswerTypeRestController@selectLOV');
             });
