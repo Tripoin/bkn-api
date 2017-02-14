@@ -13,7 +13,7 @@ use App\Models\ModelSubject;
 use App\Repository\Impl\ABaseRepository;
 use App\Repository\Impl\SecurityUser\UserRepository;
 
-class EloquentRepositorySubject extends ABaseRepository implements SubjectRepository
+class EloquentSubjectRepository extends ABaseRepository implements SubjectRepository
 {
 
     /**

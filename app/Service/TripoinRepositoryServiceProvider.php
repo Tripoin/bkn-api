@@ -94,8 +94,10 @@ use App\Repository\Impl\SecurityUser\UserRepository;
 
 use App\Repository\Impl\StudyProgram\EloquentStudyProgramRepository;
 use App\Repository\Impl\StudyProgram\StudyProgramRepository;
+use App\Repository\Impl\Subject\EloquentSubjectRepository;
 use App\Repository\Impl\Subject\SubjectCategory\EloquentSubjectCategoryRepository;
 use App\Repository\Impl\Subject\SubjectCategory\SubjectCategoryRepository;
+use App\Repository\Impl\Subject\SubjectRepository;
 use App\Repository\Impl\Subject\SubjectRequirements\EloquentRepositorySubjectRequirements;
 use App\Repository\Impl\Subject\SubjectRequirements\SubjectRequirementsRepository;
 use App\Repository\Impl\Subject\SubjectType\EloquentRepositorySubjectType;
@@ -169,6 +171,7 @@ class TripoinRepositoryServiceProvider extends ServiceProvider
         $this->app->bind(WorkingUnitRepository::class, EloquentWorkingUnitRepository::class);
         $this->app->bind(SubjectRequirementsRepository::class, EloquentRepositorySubjectRequirements::class);
         $this->app->bind(CategoryAssessRepository::class, EloquentRepositoryCategoryAssess::class);
+        $this->app->bind(SubjectRepository::class, EloquentSubjectRepository::class);
         /*SECURITY*/
         $this->app->bind(UserRepository::class, EloquentRepositoryUser::class);
         
