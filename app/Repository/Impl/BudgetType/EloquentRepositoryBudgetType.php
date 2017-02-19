@@ -22,7 +22,7 @@ class EloquentRepositoryBudgetType extends ABaseRepository implements BudgetType
         parent::__construct($userRepository);
     }
 
-   
+
 
     public function  getModel()
     {

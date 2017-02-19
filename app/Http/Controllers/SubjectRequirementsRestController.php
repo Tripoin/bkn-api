@@ -28,4 +28,15 @@ class SubjectRequirementsRestController extends ARestController
     {
         return new ModelSubjectRequirements();
     }
+    public function getCategoryWithParent(){
+        $result = $this->advancedPagination();
+        $content = json_encode($result);
+        $data = json_decode($content)->data;
+        $content = json_decode($content);
+        foreach($data as $item){
+            $item->parent_id = $this->repository->findById($item->parent_id);
+        }
+        $content->data = $data;
+        return response()->json($content);
+    }
 }
